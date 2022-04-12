@@ -68,10 +68,13 @@
                                                 <td> {{ student.firstName }} </td>
                                                 <td> {{ student.lastName }} </td>
                                                 <td> {{ student.emailId }} </td>
-                                                <td> {{ student.group}} </td>
-                                                <td> {{ student.level }} </td>
+                                                <td> {{ student.group.nameG}} </td>
+                                                <td> {{ student.group.levelG}} </td>
                                                 <td> {{ student.password }} </td>
                                                 <td> {{ student.accessCode }} </td>
+                                                
+                                                
+                                                
                                                 <td>
                                                     <button (click)= "updateStudent(student.idS)" class="btn btn-info">update</button>
                                                     <button (click) = "deleteStudent(student.idS)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>

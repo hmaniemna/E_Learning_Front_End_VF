@@ -14,7 +14,7 @@ export class ManageTeacherComponent implements OnInit {
 
   constructor(private teacherService:TeacherService,
     private router:Router,
-    private route:ActivatedRoute) { }
+    private route:ActivatedRoute) { this.getTeachers();  }
 
   ngOnInit(): void {
   }
@@ -44,3 +44,6 @@ export class ManageTeacherComponent implements OnInit {
      });
     }
 }
+
+
+//<!-- shift + alt+ f      (prettier)-->

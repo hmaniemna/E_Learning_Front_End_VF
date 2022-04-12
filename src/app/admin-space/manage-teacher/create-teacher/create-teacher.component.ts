@@ -19,9 +19,7 @@ export class CreateTeacherComponent implements OnInit {
     password: new FormControl('',[Validators.required,Validators.minLength(3)]),
     levell: new FormControl(0,Validators.required),
     access: new FormControl(0,Validators.required),
-    firstname: new FormControl('',Validators.required),
-    lastname: new FormControl('',Validators.required),
-    groupes: new FormControl('',Validators.required)
+    fullname: new FormControl('',Validators.required),
   })
 
   constructor( private teacherService:TeacherService,
@@ -35,9 +33,7 @@ export class CreateTeacherComponent implements OnInit {
   get password(){return this.createt.get('password')};
   get levell(){return this.createt.get('levell')};
   get access(){return this.createt.get('access')};
-  get firstname(){return this.createt.get('firstname')};
-  get lastname(){return this.createt.get('lastname')};
-  get groupes(){return this.createt.get('groupes')};
+  get fullname(){return this.createt.get('fullname')};
 
   saveTeacher(){
     this.teacherService.createTeacher(this.teacher).subscribe( data =>{

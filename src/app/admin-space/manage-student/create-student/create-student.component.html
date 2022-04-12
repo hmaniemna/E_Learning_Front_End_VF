@@ -72,14 +72,14 @@
                                             <div class="form-group">
                                                 <label> Group</label>
                                                   <input formControlName="groupe" type="text" class ="form-control" id = "group"
-                                                    [(ngModel)] = "student.group" name = "group" > 
+                                                    [(ngModel)] = "student.group.nameG" name = "group" > 
                                                     <span *ngIf="groupe?.invalid && groupe?.touched" class="text-danger">group is is required!</span>
                                             </div>
 
                                             <div class="form-group">
                                                 <label> Level</label>
-                                                <input formControlName="levell" type="text" class ="form-control" id = "level"
-                                                    [(ngModel)] = "student.level" name = "level" >
+                                                <input formControlName="levell" type="text" class ="form-control" id = "group"
+                                                    [(ngModel)] = "student.group.levelG" name = "group" >
                                                     <span *ngIf="levell?.invalid && levell?.touched" class="text-danger">level is is required!</span>
                                             </div>
 

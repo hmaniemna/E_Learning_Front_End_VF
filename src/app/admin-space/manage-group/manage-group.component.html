@@ -55,7 +55,6 @@
                                             <tr>
                                                 <th> Group level</th>
                                                 <th>Groupe name</th>
-                                                <th>Students</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -63,7 +62,6 @@
                                          <tr *ngFor= "let groupe of groups">
                                            <td> {{ groupe.levelG }} </td>
                                            <td>{{groupe.nameG}}</td>
-                                           <td> {{ groupe.studentss["0"] }} </td>
                                              
                                           <td>
                                             <button (click)= "updateGroup(groupe.idG)" class="btn btn-info">update</button>

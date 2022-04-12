@@ -17,7 +17,6 @@ export class CreateGroupComponent implements OnInit {
   createGroup= new FormGroup({
     leve: new FormControl('',[Validators.required,Validators.maxLength(1)]),
     namG: new FormControl('',[Validators.required,Validators.maxLength(1)]),
-    stud: new FormControl('',Validators.required),
   })
 
   constructor(private router:Router,
@@ -29,7 +28,6 @@ export class CreateGroupComponent implements OnInit {
   //for the validation to get the values from all fields 
   get leve(){return this.createGroup.get('leve')}
   get namG(){return this.createGroup.get('namG')};
-  get stud(){return this.createGroup.get('stud')};
   
   saveGroup(){
     this.groupService.createGroup(this.group).subscribe( data =>{

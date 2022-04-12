@@ -5,8 +5,7 @@ export class Student {
     firstName!: string;
     lastName!: string;
     emailId!: string;
-    group!: Group["nameG"];
-    level!:number;
+    group!: Group;
     password!: string;
     accessCode!: number;
 }

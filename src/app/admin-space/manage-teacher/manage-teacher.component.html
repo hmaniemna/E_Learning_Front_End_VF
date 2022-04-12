@@ -1,91 +1,110 @@
-<body>
-    <!--== MAIN CONTRAINER ==-->
-    <div class="container-fluid sb1">
-        <div class="row">
-            <!--== LOGO ==-->
-            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
 
-             <!--  <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+<body>
+  <!--== MAIN CONTRAINER ==-->
+  <div class="container-fluid sb1">
+    <div class="row">
+      <!--== LOGO ==-->
+      <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+        <!--  <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
                 <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a> -->
 
-                <a href="index-2.html" class=""><img src="assets/images/logo1.png" alt="" />
-                </a>
-            </div>
-        </div>
+        <a href="index-2.html" class=""
+          ><img src="assets/images/logo1.png" alt="" />
+        </a>
+      </div>
     </div>
+  </div>
 
-    <!--== BODY CONTNAINER ==-->
-    <div class="container-fluid sb2 ">
-        <div >
-            <div class="sb2-1 ">
-                  <app-side-bar></app-side-bar> 
-             </div>   
-            <!--== BODY INNER CONTAINER ==-->
-            <div class="sb2-2">
-                <!--== breadcrumbs ==-->
-                <div class="sb2-2-2">
-                    <ul>
-                        <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                        </li>
-                        <li class="active-bre"><a href="#"> Teacher List</a>
-                        </li>
-                        <li class="page-back"><a  routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
-                        </li>
-                    </ul>
+  <!--== BODY CONTNAINER ==-->
+  <div class="container-fluid sb2">
+    <div>
+      <div class="sb2-1">
+        <app-side-bar></app-side-bar>
+      </div>
+      <!--== BODY INNER CONTAINER ==-->
+      <div class="sb2-2">
+        <!--== breadcrumbs ==-->
+        <div class="sb2-2-2">
+          <ul>
+            <li>
+              <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li class="active-bre"><a href="#"> Teacher List</a></li>
+            <li class="page-back">
+              <a routerLink="/home" routerLinkActive="active"
+                ><i class="fa fa-backward" aria-hidden="true"></i> Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <a
+            routerLink="/create-teacher"
+            routerLinkActive="active"
+            class="btn btn-secondary"
+            >Add Teacher</a
+          >
+        </div>
+
+        <!--== Teachers Details ==-->
+        <div class="sb2-2-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box-inn-sp">
+                <div class="inn-title">
+                  <h4>Teacher Details</h4>
+                  <p>All about teachers like name, teacher id, email,group</p>
                 </div>
-
-
                 <div>
-                    <a routerLink="/create-teacher" routerLinkActive="active" class=" btn btn-secondary" >Add Teacher</a>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>FullName</th>
+                        <th>Email Id</th>
+                        <th>password</th>
+                        <th>accessCode</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let teacher of teachers">
+                        <td>{{ teacher.fullName }}</td>
+                        <td>{{ teacher.emailId }}</td>
+                        <td>{{ teacher.password }}</td>
+                        <td>{{ teacher.accessCode }}</td>
+                        <td>
+                          <button
+                            (click)="updateTeacher(teacher.idT)"
+                            class="btn btn-info"
+                          >
+                            update
+                          </button>
+                          <button
+                            (click)="deleteTeacher(teacher.idT)"
+                            class="btn btn-danger"
+                            style="margin-left: 10px"
+                          >
+                            Delete
+                          </button>
+                          <button
+                            (click)="teacherDetails(teacher.idT)"
+                            class="btn btn-info"
+                            style="margin-left: 10px"
+                          >
+                            View
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-
-            
-                <!--== Teachers Details ==-->
-                <div class="sb2-2-3">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="box-inn-sp">
-                                <div class="inn-title">
-                                    <h4>Teacher Details</h4>
-                                    <p>All about teachers like name, teacher id,  email,group</p>
-                                </div>
-                                <div>
-                                    <table class = "table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th> First Name</th>
-                                                <th> Last Name </th>
-                                                <th> Email Id</th>
-                                                <th>Groupes</th>
-                                                <th>password</th>
-                                                <th>accessCode</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr *ngFor = "let teacher of teachers" >
-                                                <td> {{ teacher.firstNamet }} </td>
-                                                <td> {{ teacher.lastNamet }} </td>
-                                                <td> {{ teacher.emailIdt }} </td>
-                                                <td> {{ teacher.groups}} </td>
-                                                <td> {{ teacher.passwordt }} </td>
-                                                <td> {{ teacher.Codet }} </td>
-                                                <td>
-                                                    <button (click)= "updateTeacher(teacher.idT)" class="btn btn-info">update</button>
-                                                    <button (click) = "deleteTeacher(teacher.idT)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                                                    <button (click) = "teacherDetails(teacher.idT)" class = "btn btn-info" style="margin-left: 10px"> View</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-
+          </div>
         </div>
+      </div>
     </div>
-
+  </div>
 </body>

@@ -48,45 +48,31 @@
                                         <form (ngSubmit) = "onSubmit()" [formGroup]="createt">
                                         
                                             <div class="form-group">
-                                                <label> First Name</label>
-                                                <input formControlName="firstname" type="text" class ="form-control" id = "firstNamet"
-                                                    [(ngModel)] = "teacher.firstNamet" name = "firstNamet" >
-                                                <span *ngIf="firstname?.invalid && firstname?.touched" class="text-danger">firstname is required!</span>
+                                                <label> FullName</label>
+                                                <input formControlName="fullname" type="text" class ="form-control" id = "fullName"
+                                                    [(ngModel)] = "teacher.fullName" name = "fullName" >
+                                                <span *ngIf="fullname?.invalid && fullname?.touched" class="text-danger">fullname is required!</span>
                       
                                             </div>
-                                        
-                                            <div class="form-group">
-                                                <label> Last Name</label>
-                                                <input formControlName="lastname" type="text" class ="form-control" id = "lastNamet"
-                                                    [(ngModel)] = "teacher.lastNamet" name = "lastNamet">
-                                                <span *ngIf="lastname?.invalid && lastname?.touched" class="text-danger">lastname  is required!</span>
-                                            </div>
-                                        
+
                                             <div class="form-group">
                                                 <label> Email Id</label>
                                                 <input formControlName="email" type="text" class ="form-control" id = "emailIdt" 
-                                                    [(ngModel)] = "teacher.emailIdt" name = "emailIdt" >
+                                                    [(ngModel)] = "teacher.emailId" name = "emailId" >
                                                     <span *ngIf="email?.invalid && email?.touched" class="text-danger">email is is required or format is invalid!</span>
                                             </div>
 
                                             <div class="form-group">
-                                                <label> Groups</label>
-                                                  <input formControlName="groupes" type="text" class ="form-control" id = "groups"
-                                                    [(ngModel)] = "teacher.groups" name = "groups" > 
-                                                    <span *ngIf="groupes?.invalid && groupes?.touched" class="text-danger">group is is required!</span>
-                                            </div>
-
-                                            <div class="form-group">
                                                 <label> Password</label>
-                                                <input formControlName="password" type="text" class ="form-control" id = "passwordt"
-                                                    [(ngModel)] = "teacher.passwordt" name = "passwordt" >
+                                                <input formControlName="password" type="text" class ="form-control" id = "password"
+                                                    [(ngModel)] = "teacher.password" name = "password" >
                                                     <span *ngIf="password?.invalid && password?.touched" class="text-danger">password is is required!</span>
                                             </div>
 
                                             <div class="form-group">
                                                 <label> AccessCode</label>
-                                                <input formControlName="access" type="text" class ="form-control" id = "Codet"
-                                                    [(ngModel)] = "teacher.Codet" name = "Codet" >
+                                                <input formControlName="access" type="text" class ="form-control" id = "CaccessCode"
+                                                    [(ngModel)] = "teacher.accessCode" name = "accessCode" >
                                                     <span *ngIf="access?.invalid && access?.touched" class="text-danger">accescode is is required!</span>
                                             </div>
                                         
