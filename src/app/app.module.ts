@@ -40,10 +40,10 @@ import { ManageStudentComponent } from './admin-space/manage-student/manage-stud
 
 
 
-import { FullCalendarModule } from '@fullcalendar/angular'; 
+import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction'; 
-import { HttpClientModule } from '@angular/common/http';
+import interactionPlugin from '@fullcalendar/interaction';
+import { HttpClientModule , HttpEvent} from '@angular/common/http';
 import { StudentSpaceComponent } from './student-space/student-space.component';
 import { LoginAdminComponent } from './login-all/login-admin/login-admin.component';
 import { LoginStudentComponent } from './login-all/login-student/login-student.component';
@@ -64,8 +64,14 @@ import { UpdateTeacherComponent } from './admin-space/manage-teacher/update-teac
 import { CreateTeacherComponent } from './admin-space/manage-teacher/create-teacher/create-teacher.component';
 import { TeacherDetailsComponent } from './admin-space/manage-teacher/teacher-details/teacher-details.component';
 import { LoginTeacherComponent } from './login-all/login-teacher/login-teacher.component';
+import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarteacher.component';
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
+import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
+import { ExamsComponent } from './teacherspace/exams/exams.component';
 
-FullCalendarModule.registerPlugins([ 
+
+
+FullCalendarModule.registerPlugins([
   dayGridPlugin,
   interactionPlugin
 ]);
@@ -100,7 +106,12 @@ FullCalendarModule.registerPlugins([
     CreateTeacherComponent,
     TeacherDetailsComponent,
     LoginTeacherComponent,
-  
+    SidebarteacherComponent,
+    AddexamComponent,
+    ExamsComponent
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -110,7 +121,8 @@ FullCalendarModule.registerPlugins([
     FormsModule,
     FullCalendarModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
 
     //OLD CODE MABY WILL BE NEEDED
 
@@ -129,9 +141,9 @@ FullCalendarModule.registerPlugins([
     ToastrModule,
     MatDialogModule,
     MatSidenavModule*/
-   
- 
-  
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,159 @@
+<!--== MAIN CONTRAINER ==-->
+
+  <div class="container-fluid sb1">
+      <div class="row">
+          <!--== LOGO ==-->
+          <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+
+           <!--  <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+              <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a> -->
+
+              <a href="index-2.html" class=""><img src="assets/images/logo1.png" alt="" />
+              </a>
+          </div>
+      </div>
+  </div>
+
+  <!--== BODY CONTNAINER ==-->
+  <div class="container-fluid sb2 ">
+      <div >
+          <div class="sb2-1 ">
+              <app-side-bar></app-side-bar>
+          </div>
+          <!--== BODY INNER CONTAINER ==-->
+          <div class="sb2-2">
+              <!--== breadcrumbs ==-->
+              <div class="sb2-2-2">
+                  <ul>
+                      <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                      </li>
+                      <li class="active-bre"><a href="#"> Add new Test</a>
+                      </li>
+                      <li class="page-back"><a href="" routerLink="/admin-space" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!--== User Details ==-->
+              <div class="sb2-2-3">
+                  <div class="row">
+                      <div class="col-md-12">
+          <div class="box-inn-sp admin-form">
+                              <div class="inn-title">
+                                  <h4>Add New Test Informations</h4>
+                                  <p>Here you can edit your website basic details URL, Phone, Email, Address, User and password and more</p>
+                              </div>
+                              <div class="tab-inn">
+                                  <div>
+
+                                      <form  [formGroup]="createt">
+
+                                        <!--<div class="form-group">
+                                          <label>Test Name</label>
+                                          <input formControlName="start_date" type="text" class ="form-control" id = "start_date"
+                                              [(ngModel)] = "exam.testname" name = "testname" >
+                                        <span *ngIf="?.invalid && firstname?.touched" class="text-danger">firstname is required!</span>
+
+
+                                         <div class="form-group">
+                                              <label> Start_Date</label>
+                                              <input formControlName="start_date" type="text" class ="form-control" id = "start_date"
+                                                  [(ngModel)] = "exam.start_date" name = "start_date" >
+                                             <span *ngIf="?.invalid && firstname?.touched" class="text-danger">firstname is required!</span>
+
+
+
+                                        <div class="form-group">
+                                              <label> Duration</label>
+                                              <input formControlName="duration" type="text" class ="form-control" id = "duration"
+                                                  [(ngModel)] = "exam.duration" name = "duration">
+                                           <span *ngIf="lastname?.invalid && lastname?.touched" class="text-danger">lastname  is required!</span>
+
+                                          </div>
+
+                                         <div class="file-field input-field">
+                                            <div class="btn admin-upload-btn">
+                                                <span>File</span>
+                                                <input type="file" multiple=""  [(ngModel)] = "exam.doc" name = "doc">
+                                            </div>
+                                            <div class="file-path-wrapper">
+                                                <input class="file-path validate" type="text" placeholder="Upload course banner image"
+                                               >
+                                            </div>
+                                        </div>
+
+
+                                         div *ngIf="filenames?.length > 0" class="js-upload-finished">
+                                              <h3>Processed files</h3>
+                                              <div *ngFor="let filename of filenames" class="list-group">
+                                                <a (click)="onDownloadFile(filename)" class="list-group-item list-group-item-success" style="cursor: pointer;">
+                                                  {{ filename }}
+                                                  <a class="alert-success float-right">Download</a>
+                                                </a><br>
+                                              </div>
+                                            </div>
+
+                                          </div>
+
+                                        -->
+
+
+                                          <div class="col-8">
+                                            <label class="btn btn-default p-0">
+                                              <input type="file" (change)="selectFile($event)"  />
+                                            </label>
+                                          </div>
+
+                                          <div class="col-4">
+                                            <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
+                                              Upload
+                                            </button>
+                                          </div>
+
+
+                                        <div *ngIf="currentFile" class="progress my-3">
+                                          <div
+                                            class="progress-bar progress-bar-info"
+                                            role="progressbar"
+                                            attr.aria-valuenow="{{ progress }}"
+                                            aria-valuemin="0"
+                                            aria-valuemax="100"
+                                            [ngStyle]="{ width: progress + '%' }"
+                                          >
+                                            {{ progress }}%
+                                          </div>
+                                        </div>
+
+
+
+
+<div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
+
+<div class="card mt-3">
+  <div class="card-header">List of Files</div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let file of fileInfos | async"
+  >
+    <li class="list-group-item">
+      <a href="{{ file.url }}">{{ file.name }}</a>
+    </li>
+  </ul>
+</div>
+
+                                         <a class = "btn btn-success" type ="submit" routerLink="/exams">View Tests</a>
+
+                                      </form>
+                                      </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
+
