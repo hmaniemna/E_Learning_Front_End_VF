@@ -1,11 +1,12 @@
-import { Group } from "./group";
+import { Course } from "./course";
+
 
 export class Teacher {
     idT!:number;
-    firstNamet!:String;
-    lastNamet!:String;
-    emailIdt!:String;
-    passwordt!:String;
-    Codet!:number;
-    groups!:Group[];
+    fullName!:String;
+    emailId!:String;
+    password!:String;
+    accessCode!:number;
+    course !: Course;
+    group!:Group;
 }

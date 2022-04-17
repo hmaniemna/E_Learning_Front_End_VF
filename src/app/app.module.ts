@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 //--------------------------
 //This is the importation in the last project
@@ -40,10 +46,8 @@ import { ManageStudentComponent } from './admin-space/manage-student/manage-stud
 
 
 
-import { FullCalendarModule } from '@fullcalendar/angular';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
-import { HttpClientModule , HttpEvent} from '@angular/common/http';
+
+
 import { StudentSpaceComponent } from './student-space/student-space.component';
 import { LoginAdminComponent } from './login-all/login-admin/login-admin.component';
 import { LoginStudentComponent } from './login-all/login-student/login-student.component';
@@ -64,10 +68,16 @@ import { UpdateTeacherComponent } from './admin-space/manage-teacher/update-teac
 import { CreateTeacherComponent } from './admin-space/manage-teacher/create-teacher/create-teacher.component';
 import { TeacherDetailsComponent } from './admin-space/manage-teacher/teacher-details/teacher-details.component';
 import { LoginTeacherComponent } from './login-all/login-teacher/login-teacher.component';
+import { CreateSubjectComponent } from './admin-space/manage-subject/create-subject/create-subject.component';
+import { UpdateSubjectComponent } from './admin-space/manage-subject/update-subject/update-subject.component';
+import { TimeTableFilter } from './pipe.filter';
+import { CreateCalendarComponent } from './admin-space/manage-calendar/create-calendar/create-calendar.component';
+import { UpdateCalendarComponent } from './admin-space/manage-calendar/update-calendar/update-calendar.component';
 import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarteacher.component';
-import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from './teacherspace/exams/exams.component';
+import { ClassroomComponent } from './teacherspace/classroom/classroom.component';
+
 
 
 
@@ -108,12 +118,20 @@ FullCalendarModule.registerPlugins([
     LoginTeacherComponent,
     SidebarteacherComponent,
     AddexamComponent,
-    ExamsComponent
+    ExamsComponent,
 
 
 
+    CreateSubjectComponent,
+    UpdateSubjectComponent,
+    TimeTableFilter,
+    CreateCalendarComponent,
+    UpdateCalendarComponent,
+    ClassroomComponent
   ],
+
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -123,6 +141,8 @@ FullCalendarModule.registerPlugins([
     HttpClientModule,
     ReactiveFormsModule,
 
+    MatSnackBarModule,
+    Ng2SearchPipeModule,
 
     //OLD CODE MABY WILL BE NEEDED
 
@@ -144,8 +164,10 @@ FullCalendarModule.registerPlugins([
 
 
 
+
+
   ],
-  providers: [],
+  providers: [TimeTableFilter,],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
@@ -153,6 +175,8 @@ FullCalendarModule.registerPlugins([
   entryComponents: [
     HomeComponent
     ],
+
+
 
 })
 export class AppModule { }

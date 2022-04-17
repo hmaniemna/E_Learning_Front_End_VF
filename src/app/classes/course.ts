@@ -1,8 +1,7 @@
-
+import { Teacher } from "./teacher";
 export class Course {
-  id!:number ;
-  title!:string ;
-  description!:string;
-  doc!:DocumentType ;
-
+    idCourse !: number;
+    title !: string;
+    year !: number;
+    teacher !: Teacher;
 }

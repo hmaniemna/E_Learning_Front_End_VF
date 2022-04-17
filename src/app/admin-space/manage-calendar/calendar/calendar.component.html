@@ -1,3 +1,5 @@
+<!-------------------------TO VIEW THE CALENDAR--------------------->
+
 <body>
     <!--== MAIN CONTRAINER ==-->
     <div class="container-fluid sb1">
@@ -27,7 +29,7 @@
                     <ul>
                         <li><a href="/home"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Calendar</a>
+                        <li class="active-bre"><a href="#">View Calendar</a>
                         </li>
                         <li class="page-back"><a href="/home"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
                         </li>
@@ -39,9 +41,44 @@
                     
                 </div> 
 
-                <div class="manage-calendar">
-                    <full-calendar [options]="calendarOptions"></full-calendar>
+                <div *ngIf="isDataAvailable">
+                    <app-panel-loader></app-panel-loader>
+                    <div class="container" >
+                          
+                        <div class="container mt-4">
+                            <table class="table table-sm">
+                                <thead class="thead-dark">
+                                  <th>#</th>
+                                  <th>Monday</th>
+                                  <th>Tuesday</th>
+                                  <th>Wednesday</th>
+                                  <th>Thurstday</th>
+                                  <th>Friday</th>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let row of timetable; index as counter">
+                                    <td><b>{{counter + 1}}</b></td>
+                                    <td *ngFor="let entity of row ">
+                                        <div *ngIf="!!entity" >
+                                            <table class="table-sm">
+                                                <tr>
+                                                    <td>Course:</td>
+                                                    <td><b>{{entity.course.title}}</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Group:</td>
+                                                    <td><b>{{entity.group.nameG}}/{{entity.group.levelG}}</b></td>
+                                                </tr>
+                                            </table>
+                                        </div> 
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
                 </div>
+                
 
             </div>
         </div>

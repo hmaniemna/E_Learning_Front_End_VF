@@ -56,7 +56,7 @@ deletetest(id: String){
     });
    }
    downloadtest(id : String){
-     this.examservice.downloadFile(id).subscribe(data =>{
+     this.examservice.downloadtest(id).subscribe(data =>{
       console.log(data);
      });
    }

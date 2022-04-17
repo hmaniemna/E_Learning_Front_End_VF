@@ -21,9 +21,7 @@ createt= new FormGroup({
   password: new FormControl('',Validators.required),
   levell: new FormControl(0,Validators.required),
   access: new FormControl(0,Validators.required),
-  firstname: new FormControl('',Validators.required),
-  lastname: new FormControl('',Validators.required),
-  groupes: new FormControl('',Validators.required)
+  fullname: new FormControl('',Validators.required),
 })
 
   constructor(private teacherService:TeacherService,
@@ -44,9 +42,7 @@ createt= new FormGroup({
     get password(){return this.createt.get('password')};
     get levell(){return this.createt.get('levell')};
     get access(){return this.createt.get('access')};
-    get firstname(){return this.createt.get('firstname')};
-    get lastname(){return this.createt.get('lastname')};
-    get groupes(){return this.createt.get('groupes')};
+    get fullname(){return this.createt.get('fullname')};
 
     onSubmit(){
       this.teacherService.updateTeacher(this.id,this.teacher).subscribe(data =>{ 

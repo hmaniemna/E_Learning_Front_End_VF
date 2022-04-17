@@ -62,12 +62,6 @@
                                                 <span *ngIf="namG?.invalid && namG?.touched" class="text-danger">name  is required!</span>
                                             </div>
                                         
-                                            <div class="form-group">
-                                                <label>Students</label>
-                                                <input formControlName="stud" type="text" class ="form-control" id = "studentss" 
-                                                    [(ngModel)] = "group.studentss" name = "studentss" >
-                                                    <span *ngIf="stud?.invalid && stud?.touched" class="text-danger">students for the group are required!</span>
-                                            </div>
 
                                         
                                             <button class = "btn btn-success" type ="submit">Submit</button>

@@ -1,16 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Course } from '../classes/course';
+import { Teacher } from '../classes/teacher';
+import { TeacherService } from '../services/teacher.service';
 @Component({
   selector: 'app-teacherspace',
   templateUrl: './teacherspace.component.html',
   styleUrls: ['./teacherspace.component.scss']
 })
-export class TeacherspaceComponent implements OnInit {
-
-  constructor(private router: Router) { }
+export class TeacherspaceComponent implements OnInit{
+  teacher!:Teacher;
+  courseInfos?: Observable<any>;
+  constructor(private router: Router , private teacherservice : TeacherService) {
+   this.courseInfos= this.teacherservice.getAllcourses(this.teacher.idT) ;
+  }
 
   ngOnInit(): void {
   }
+
   GoTocourses($myParam: string = ''): void {
     const navigationDetails: string[] = ['/'];
     if($myParam.length) {

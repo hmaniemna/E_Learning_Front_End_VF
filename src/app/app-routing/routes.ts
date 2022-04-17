@@ -23,6 +23,12 @@ import { TeacherDetailsComponent } from '../admin-space/manage-teacher/teacher-d
 import { UpdateTeacherComponent } from '../admin-space/manage-teacher/update-teacher/update-teacher.component';
 import { AddexamComponent } from '../teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from '../teacherspace/exams/exams.component';
+import { LoginTeacherComponent } from '../login-all/login-teacher/login-teacher.component';
+import { ManageSubjectComponent } from '../admin-space/manage-subject/manage-subject.component';
+import { CreateSubjectComponent } from '../admin-space/manage-subject/create-subject/create-subject.component';
+import { UpdateSubjectComponent } from '../admin-space/manage-subject/update-subject/update-subject.component';
+import { CreateCalendarComponent } from '../admin-space/manage-calendar/create-calendar/create-calendar.component';
+import { UpdateCalendarComponent } from '../admin-space/manage-calendar/update-calendar/update-calendar.component';
 
 
 export const routes: Routes = [
@@ -37,6 +43,10 @@ export const routes: Routes = [
     //all the paths related to the admin-space
     {path: 'manage-calendar',  component: ManageCalendarComponent},
     {path: 'calendar',  component: CalendarComponent },
+    {path: 'create-calendar', component:CreateCalendarComponent},
+    {path: 'update-calendar', component:UpdateCalendarComponent},
+
+    {path:'login-teacher', component:LoginTeacherComponent},
     {path: 'manage-teacher',  component: ManageTeacherComponent },
     {path: 'create-teacher', component:CreateTeacherComponent},
     {path: 'update-teacher/:id', component:UpdateTeacherComponent},
@@ -56,4 +66,10 @@ export const routes: Routes = [
  { path: 'addexam' , component: AddexamComponent},
 {path : 'exams' , component: ExamsComponent},
     {path: 'liststudents',  component: TeacherspaceComponent },
+
+
+    {path: 'manage-subject', component: ManageSubjectComponent},
+    {path: 'create-subject',  component: CreateSubjectComponent },
+    {path: 'update-subject/:id',  component: UpdateSubjectComponent },
+
 ];
