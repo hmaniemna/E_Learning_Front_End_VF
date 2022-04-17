@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Teacher } from '../classes/teacher';
 import { Observable } from 'rxjs';
+import { Course } from '../classes/course';
 
 @Injectable({
   providedIn: 'root'
@@ -35,4 +36,7 @@ export class TeacherService {
   getTeacherById(id:number):Observable<Teacher>{
     return this.httpClient.get<Teacher>(`${this.baseUrl}/${id}`);
   }
+  //return the list of courses
+  getAllcourses(id:number):Observable<Course>{
+    return this.httpClient.get<Course>(`${this.baseUrl}/${id}`);}
 }

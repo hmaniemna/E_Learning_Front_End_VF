@@ -1,3 +1,4 @@
+import { Course } from "./course";
 
 
 export class Teacher {
@@ -6,4 +7,6 @@ export class Teacher {
     emailId!:String;
     password!:String;
     accessCode!:number;
+    course !: Course;
+    group!:Group;
 }
