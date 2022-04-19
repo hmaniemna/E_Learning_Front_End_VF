@@ -1,5 +1,5 @@
 import { Course } from "./course";
-
+import { Group } from "./group";
 
 export class Teacher {
     idT!:number;

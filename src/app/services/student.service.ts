@@ -12,9 +12,9 @@ private baseUrl= "http://localhost:8080/api/v1/students"
   constructor(private httpClient: HttpClient) { }
 
   //login to pass the data from the server to the controllers   its not right!!!
-  studentLogin(student: Student):Observable<Object>{
-    console.log(student);
-    return this.httpClient.post(`${this.baseUrl}`,student);
+  studentLogin(email:String,password:String):Observable<Object>{
+    console.log(email,password);
+    return this.httpClient.get(`${this.baseUrl}/${email}/${password}`);
   }
 
  //return the student list by level  ?????????????????????????????

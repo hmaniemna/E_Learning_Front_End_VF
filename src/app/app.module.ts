@@ -1,3 +1,7 @@
+//SHIFT + ALT + F => PRETTIER **********
+
+
+
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -31,6 +35,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatSidenavModule} from '@angular/material/sidenav';*/
 
 //-----------------------------------------
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -77,6 +83,8 @@ import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarte
 import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from './teacherspace/exams/exams.component';
 import { ClassroomComponent } from './teacherspace/classroom/classroom.component';
+import { ManageAdminAccountComponent } from './admin-space/manage-admin-account/manage-admin-account.component';
+import { UpdateAccountComponent } from './admin-space/manage-admin-account/update-account/update-account.component';
 
 
 
@@ -127,7 +135,9 @@ FullCalendarModule.registerPlugins([
     TimeTableFilter,
     CreateCalendarComponent,
     UpdateCalendarComponent,
-    ClassroomComponent
+    ClassroomComponent,
+    ManageAdminAccountComponent,
+    UpdateAccountComponent
   ],
 
   imports: [
@@ -143,6 +153,8 @@ FullCalendarModule.registerPlugins([
 
     MatSnackBarModule,
     Ng2SearchPipeModule,
+    MDBBootstrapModule,
+    MatCardModule,
 
     //OLD CODE MABY WILL BE NEEDED
 

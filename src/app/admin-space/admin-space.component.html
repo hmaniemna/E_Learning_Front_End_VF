@@ -1,81 +1,119 @@
-
-
 <body>
-    <!--== MAIN CONTRAINER ==-->
-    <div class="container-fluid sb1">
-        <div class="row">
-            <!--== LOGO ==-->
-            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
-
-             <!--  <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+  <!--== MAIN CONTRAINER ==-->
+  <div class="container-fluid sb1">
+    <div class="row">
+      <!--== LOGO ==-->
+      <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+        <!--  <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
                 <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a> -->
 
-                <a href="index-2.html" class=""><img src="assets/images/logo1.png" alt="" />
-                </a>
-            </div>
-        </div>
+        <a href="index-2.html" class=""
+          ><img src="assets/images/logo1.png" alt="" />
+        </a>
+      </div>
     </div>
+  </div>
 
-    <!--== BODY CONTNAINER ==-->
-    <div class="container-fluid sb2 ">
-        <div >
-            <div class="sb2-1 ">
-            <app-side-bar></app-side-bar>
-            </div>
+  <!--== BODY CONTNAINER ==-->
+  <div class="container-fluid sb2">
+    <div>
+      <div class="sb2-1">
+        <app-side-bar></app-side-bar>
+      </div>
 
-            <!--== BODY INNER CONTAINER ==-->
-            <div class="sb2-2">
-                <!--== breadcrumbs ==-->
-                <div class="sb2-2-2">
-                    <ul>
-                        <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                        </li>
-                        <li class="active-bre"><a href="#"> Dashboard</a>
-                        </li>
-                        <li class="page-back"><a href="./"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--== DASHBOARD INFO ==-->
-                <div class="sb2-2-1">
-                    <h2>Admin Dashboard</h2>
-                    <p>Welcome to your space! manage everything here!</p>
-                    <div class="db-2">
-                        <ul>
-                            <li>
-                                <div class="dash-book dash-b-1">
-                                    <h5>All Courses</h5>
-                                    <h4>948</h4>
-                                    <a href="#">View more</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dash-book dash-b-2">
-                                    <h5>Admission</h5>
-                                    <h4>672</h4>
-                                    <a href="#">View more</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dash-book dash-b-3">
-                                    <h5>Students</h5>
-                                    <h4>689</h4>
-                                    <a href="#">View more</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dash-book dash-b-4">
-                                    <h5>Enquiry</h5>
-                                    <h4>24</h4>
-                                    <a href="#">View more</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+      <!--== BODY INNER CONTAINER ==-->
+      <div class="sb2-2">
+        <!--== breadcrumbs ==-->
+        <div class="sb2-2-2">
+          <ul>
+            <li>
+              <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li class="active-bre"><a href="#"> Dashboard</a></li>
+            <li class="page-back">
+              <a href="./"
+                ><i class="fa fa-backward" aria-hidden="true"></i> Logout</a
+              >
+            </li>
+          </ul>
         </div>
-    </div>
+        <!--== DASHBOARD INFO ==-->
+        <div class="sb2-2-1">
+          <h2>Admin Dashboard</h2>
+          <p>Welcome to your space! manage everything here!</p>
+          <div class="db-2">
+            <ul>
+              <li class="mr-4">
+                <!-- Card -->
+                <mdb-card>
+                  <div
+                    class="view rgba-white-slight waves-light"
+                    mdbWavesEffect
+                  >
+                    <!-- Card img -->
+                    <mdb-card-img
+                      src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                      alt="Card image cap"
+                    ></mdb-card-img>
+                    <a>
+                      <div class="mask"></div>
+                    </a>
+                  </div>
+                  <!--Card content-->
+                  <mdb-card-body>
+                    <!--Title-->
+                    <mdb-card-title>
+                      <h4>Manage your account</h4>
+                    </mdb-card-title>
 
+                    <!--Text-->
+                    <mdb-card-text>
+                      Click here to update your personal informations for the logging.
+                    </mdb-card-text>
+
+                    <a href="" routerLink="/manage-admin-account" routerLinkActive="active" mdbBtn color="primary" mdbWavesEffect>Click</a>
+                  </mdb-card-body>
+                </mdb-card>
+                <!-- Card -->
+              </li>
+              
+              <li class="ml-4">
+                <!-- Card -->
+                <mdb-card>
+                  <div
+                    class="view rgba-white-slight waves-light"
+                    mdbWavesEffect
+                  >
+                    <!-- Card img -->
+                    <mdb-card-img
+                      src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                      alt="Card image cap"
+                    ></mdb-card-img>
+                    <a>
+                      <div class="mask"></div>
+                    </a>
+                  </div>
+                  <!--Card content-->
+                  <mdb-card-body>
+                    <!--Title-->
+                    <mdb-card-title>
+                      <h4>About this application</h4>
+                    </mdb-card-title>
+
+                    <!--Text-->
+                    <mdb-card-text>
+                      Some indications on the functionalities of this application.
+                    </mdb-card-text>
+
+                    <a href="#" mdbBtn color="primary" mdbWavesEffect>Click</a>
+                  </mdb-card-body>
+                </mdb-card>
+                <!-- Card -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

@@ -20,12 +20,13 @@ student:Student = new Student();
 
  
 
+
   loginStudent(){
-    console.log(this.student);
-    this.studentService.studentLogin(this.student).subscribe(data=> {
+    console.log(this.student.emailId,this.student.password);
+    this.studentService.studentLogin(this.student.emailId,this.student.password).subscribe(data=> {
       alert("Login operation successful!")
       //to navigate to another page
-     // this.router.navigate(['/student-space']);
+      this.router.navigate(['/student-space']);
     },
     error => alert("Error, Please retry!"));
   }

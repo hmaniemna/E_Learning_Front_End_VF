@@ -92,7 +92,7 @@
  .con-title h2 span{
      font-size: 36px;
      font-weight:700;
-     color: #f26838;
+     color: #38aef2;
      line-height: 40px;
 }
  .con-title p{
@@ -287,7 +287,7 @@
 }
  .web-hom-grid a img{
      width: 100%;
-     background: #FF5722;
+     background: #22a7ff;
      -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
      -o-transition: all 0.5s ease;
@@ -301,7 +301,7 @@
      transition:all 0.5s ease;
 }
  .wed-grid-img{
-     background: #FF9800;
+     background: #00c3ff;
 }
  .wed-grid-img img{
      width:100%;
@@ -371,7 +371,7 @@
      font-size: 16px;
 }
  .fix-rati i{
-     color: #FF9800;
+     color: #00c3ff;
      font-size: 18px;
 }
  .fix-rat-1{
@@ -901,7 +901,7 @@
      font-size: 12px;
 }
  .ed-com-t1-right ul li:nth-child(1) a{
-     background: #e66030;
+     background: #30b2e6;
 }
  .ed-com-t1-right ul li:nth-child(2) a{
      background: #013673;
@@ -931,7 +931,7 @@
      position:relative;
 }
  .main-menu ul li a:hover{
-     color: #e66030;
+     color: #30ace6;
 }
  .main-menu ul li a:after{
      content: "";
@@ -940,8 +940,8 @@
      height: 3px;
      bottom: 12px;
      left: 0;
-     color: #e66030;
-     background-color: #e66030;
+     color: #30a3e6;
+     background-color: #30e6e6;
      visibility: hidden;
      -webkit-transform: scaleX(0);
      transform: scaleX(0);
@@ -1381,9 +1381,9 @@
 }
  .light-btn{
      color: #fff;
-     background: #f36b3b;
-     background: -webkit-linear-gradient(to top, #ef612f, #f36b3b);
-     background: linear-gradient(to top, #ef612f, #f36b3b);
+     background: #3b75f3;
+     background: -webkit-linear-gradient(to top, #2f89ef, #3bb9f3);
+     background: linear-gradient(to top, #2f99ef, #3bb9f3);
      padding: 0px 10px;
      line-height: 40px;
      border-radius: 3px;
@@ -1463,9 +1463,9 @@
 }
  .btn-submit{
      color: #fff;
-     background: #e74715;
-     background: -webkit-linear-gradient(to top, #d83d0c, #FF5722);
-     background: linear-gradient(to top, #d83d0c, #FF5722);
+     background: #1569e7;
+     background: -webkit-linear-gradient(to top, #0c75d8, #2289ff);
+     background: linear-gradient(to top, #0c75d8, #22aeff);
      padding: 4px 34px;
      line-height: 32px;
      border-radius: 3px;
@@ -1584,12 +1584,12 @@
      font-weight: 600;
      text-transform: uppercase;
      padding: 13px;
-     border: 1px solid #e25f30;
+     border: 1px solid #309be2;
      border-top-right-radius: 2px;
      border-bottom-right-radius: 2px;
-     background: #e05a2b;
-     background: -webkit-linear-gradient(to top, #ef612f, #f36b3b);
-     background: linear-gradient(to top, #de592a, #f36b3b);
+     background: #2bbce0;
+     background: -webkit-linear-gradient(to top, #2fa9ef, #3ba9f3);
+     background: linear-gradient(to top, #2abade, #3bb0f3);
 }
 
 /*-------------------------------------------------*/
@@ -1618,7 +1618,7 @@
      text-transform: uppercase;
      font-weight: 700;
      line-height: 28px;
-     color: #e66030;
+     color: #308ee6;
 }
  .slider-con p{
      font-size: 20px;
@@ -1642,11 +1642,11 @@
      margin:0px 10px;
 }
  .bann-btn-1{
-     background: #f36b3b;
-     background: -webkit-linear-gradient(to top, #ef612f, #f36b3b);
-     background: linear-gradient(to top, #ef612f, #f36b3b);
+     background: #3bb0f3;
+     background: -webkit-linear-gradient(to top, #2fa2ef, #3bb9f3);
+     background: linear-gradient(to top, #2fb9ef, #3bb9f3);
      color: #fff;
-     border: 1px solid #f36b3b;
+     border: 1px solid #3bb9f3;
 }
  .bann-btn-1:hover{
      border: 1px solid #fff;
@@ -1781,7 +1781,7 @@
  .wed-hom-ser ul li a:hover{
      -webkit-transform: scale(1.1);
      transform: scale(1.1);
-     background: #ef6331;
+     background: #31b3ef;
      color: #fff;
 }
  .wed-hom-ser ul li a img{
@@ -1855,7 +1855,7 @@
 /* =  11.BOTTOM BOOKING 
 /*-------------------------------------------------*/
  .full-bot-book{
-     background: #f36b3b;
+     background: #3ba9f3;
      padding: 40px 0px;
      position: relative;
      overflow: hidden;
@@ -2127,11 +2127,11 @@
      font-size: 14px;
      height: 45px;
      text-align: center;
-     background: #f36b3b;
-     background: -webkit-linear-gradient(to top, #ef612f, #f36b3b);
-     background: linear-gradient(to top, #ef612f, #f36b3b);
+     background: #3bb9f3;
+     background: -webkit-linear-gradient(to top, #2fa9ef, #3bb0f3);
+     background: linear-gradient(to top, #2fc2ef, #3bcef3);
      color: #fff;
-     border: 1px solid #f36b3b;
+     border: 1px solid #3bb9f3;
      width: 100%;
 }
  .cor-p7-revi label{
@@ -2699,7 +2699,7 @@
      padding: 25px;
      border-radius: 4px;
      box-shadow: 0px 16px 40px -10px rgb(0, 0, 0);
-     border-bottom: 5px solid #f06433;
+     border-bottom: 5px solid #3385f0;
 }
  .in2-bi-form h4{
      text-align: center;
@@ -2849,7 +2849,7 @@
      padding-bottom: 20px;
 }
  .udb-time-line ul li:hover .fa-clock-o{
-     background: #e66030;
+     background: #3094e6;
      -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
      -o-transition: all 0.5s ease;
@@ -3494,7 +3494,7 @@ left: 0;
      display: inline-block;
 }
  .aw-re-btn:hover{
-     background:#f26838;
+     background:#38aef2;
      color:#fff;
 }
 /*-------------------------------------------------*/
@@ -3542,7 +3542,7 @@ left: 0;
  .qu-new h5 {
      display: inline-block;
      padding: 5px 11px 2px 10px;
-     background: #FFC107;
+     background: #07a4ff;
      font-size: 22px;
      margin-bottom: 25px;
      color: #fff;
@@ -3602,8 +3602,8 @@ left: 0;
 }
  .home-requ input[type="submit"] {
      color: #000;
-     background-color: #FFC107;
-     border-color: #FFC107;
+     background-color: #0787ff;
+     border-color: #077bff;
      font-weight: 600;
      text-transform: uppercase;
      padding-bottom: 7px;
@@ -3639,7 +3639,7 @@ left: 0;
      transition: all 0.5s ease;
      -webkit-transform: rotate(360deg);
      transform: rotate(360deg);
-     background: #f26939;
+     background: #39a8f2;
      color: #ffffff;
 }
  .box-item .icon {
@@ -3833,8 +3833,8 @@ left: 0;
 }
  .pg-eve-reg a:hover{
      color: #ffffff;
-     border: 1px solid #d45023;
-     background: #f26838;
+     border: 1px solid #2352d4;
+     background: #38aef2;
 }
  .pg-eve-reg:nth-child(1) a{
 }
@@ -3876,8 +3876,8 @@ left: 0;
 }
  .pg-eve-main ul li:hover .pg-eve-reg a:nth-child(1){
      color: #ffffff;
-     border: 1px solid #d45023;
-     background: #f26838;
+     border: 1px solid #2343d4;
+     background: #38b7f2;
 }
  .head-2{
      padding: 55px 0px 40px 0px;
@@ -4114,7 +4114,7 @@ left: 0;
     position: relative;
     overflow: hidden;
     padding: 15px;
-    background: #e66030;
+    background: #39a8f2;
 }
 .sb2-12 ul {
     padding: 0px;
@@ -4439,7 +4439,7 @@ left: 0;
     padding-right: 5px;
 }
 .sb2-2-2 ul li a {
-    color: #495d65;
+    color: #1aa5d8;
     vertical-align: middle;
 }
 .sb2-2-2 ul li a i {
@@ -4448,13 +4448,13 @@ left: 0;
 .active-bre:before {
     content: "/";
     padding: 0 5px;
-    color: #333;
+    color: #1aa5d8;
 }
 .my-acc {} .my-acc:hover {
-    background: #4b5a61 !important;
+    background: #1aa5d8 !important;
 }
 .my-acc:focus {
-    background: #4b5a61 !important;
+    background: #1aa5d8 !important;
 }
 /*-------------------------------------------------------*/
 /* 3. HOME PAGE COUNTING
@@ -5541,7 +5541,7 @@ padding: 6px 25px;
     margin-top: 15px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #e66030;	
+    color: #30ace6;	
 }
 .ad-log-in-con p{}
 .ad-log-in-con form{}

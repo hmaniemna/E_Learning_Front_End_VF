@@ -1,4 +1,5 @@
 export class Admin {
     idA!: number;
-    password!: string;
+    password !: String;
+    code!: number;
 }

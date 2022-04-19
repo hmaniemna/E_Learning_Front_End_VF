@@ -29,16 +29,20 @@ import { CreateSubjectComponent } from '../admin-space/manage-subject/create-sub
 import { UpdateSubjectComponent } from '../admin-space/manage-subject/update-subject/update-subject.component';
 import { CreateCalendarComponent } from '../admin-space/manage-calendar/create-calendar/create-calendar.component';
 import { UpdateCalendarComponent } from '../admin-space/manage-calendar/update-calendar/update-calendar.component';
+import { ManageAdminAccountComponent } from '../admin-space/manage-admin-account/manage-admin-account.component';
+import { UpdateAccountComponent } from '../admin-space/manage-admin-account/update-account/update-account.component';
 
 
 export const routes: Routes = [
 
-    { path: '', redirectTo: '/teacherspace', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home',  component: HomeComponent },
     {path: 'sections',  component: SectionsComponent },
 
     {path: 'admin-space',  component: AdminSpaceComponent},
     { path: 'login-admin',  component: LoginAdminComponent },
+    {path:'manage-admin-account', component:ManageAdminAccountComponent},
+    {path:'update-account/:id',component:UpdateAccountComponent},
 
     //all the paths related to the admin-space
     {path: 'manage-calendar',  component: ManageCalendarComponent},
@@ -62,14 +66,15 @@ export const routes: Routes = [
     {path: 'create-group',  component: CreateGroupComponent },
     {path: 'update-group/:id',  component: UpdateGroupComponent },
     {path: 'details-group/:id',  component: DetailsGroupComponent },
-    {path: 'teacherspace',  component: TeacherspaceComponent },
- { path: 'addexam' , component: AddexamComponent},
-{path : 'exams' , component: ExamsComponent},
-    {path: 'liststudents',  component: TeacherspaceComponent },
 
 
     {path: 'manage-subject', component: ManageSubjectComponent},
     {path: 'create-subject',  component: CreateSubjectComponent },
     {path: 'update-subject/:id',  component: UpdateSubjectComponent },
 
+    //all the paths related to the admin-space
+    {path: 'teacherspace',  component: TeacherspaceComponent },
+    { path: 'addexam' , component: AddexamComponent},
+    {path : 'exams' , component: ExamsComponent},
+    {path: 'liststudents',  component: TeacherspaceComponent },
 ];
