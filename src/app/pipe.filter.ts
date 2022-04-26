@@ -13,6 +13,6 @@ export class TimeTableFilter implements PipeTransform{
       }
 
       return timeTables.filter(timeTable =>
-        timeTable.course.title.toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase()) !== -1)
+        timeTable.group.nameG.toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase()) !== -1)
     }
 }

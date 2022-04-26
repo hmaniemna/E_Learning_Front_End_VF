@@ -41,42 +41,41 @@
                     
                 </div> 
 
-                <div *ngIf="isDataAvailable">
-                    <app-panel-loader></app-panel-loader>
-                    <div class="container" >
-                          
-                        <div class="container mt-4">
-                            <table class="table table-sm">
-                                <thead class="thead-dark">
-                                  <th>#</th>
-                                  <th>Monday</th>
-                                  <th>Tuesday</th>
-                                  <th>Wednesday</th>
-                                  <th>Thurstday</th>
-                                  <th>Friday</th>
-                                </thead>
-                                <tbody>
-                                  <tr *ngFor="let row of timetable; index as counter">
-                                    <td><b>{{counter + 1}}</b></td>
-                                    <td *ngFor="let entity of row ">
-                                        <div *ngIf="!!entity" >
-                                            <table class="table-sm">
-                                                <tr>
-                                                    <td>Course:</td>
-                                                    <td><b>{{entity.course.title}}</b></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Group:</td>
-                                                    <td><b>{{entity.group.nameG}}/{{entity.group.levelG}}</b></td>
-                                                </tr>
-                                            </table>
-                                        </div> 
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                        </div>
-                    </div>
+                
+                <div>
+                    <table class = "table table-striped">
+                        <thead>
+                            <tr>
+                                <th>group level</th>
+                                <th> hour</th>
+                                <th> Monday </th>
+                                <th> Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thurdday</th>
+                                <th>Friday</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let timetable of timetables" >
+                                <td> {{ timetable.lessonLevel }}</td>
+                                <td> {{ timetable.hourS }}->{{timetable.hourE}} </td>
+                                <td> {{ timetable.Monday.title }} </td>
+                                <td> {{ timetable.Tuesday.title }} </td>
+                                <td> {{ timetable.Wednesday.title}} </td>
+                                <td> {{ timetable.Thirsday.title}} </td>
+                                <td> {{ timetable.Friday.title}} </td>
+                                
+                                
+                                
+                                <td>
+                                    <button (click)= "updatetimeTable(timetable.idTable)" class="btn btn-info">update</button>
+                                    <button (click) = "deletetimeTable(timetable.idTable)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                                    <button (click) = "groupTable(timetable.idTable)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 
 

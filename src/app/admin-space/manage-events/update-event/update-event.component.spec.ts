@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManageClassroomComponent } from './manage-classroom.component';
+import { UpdateEventComponent } from './update-event.component';
 
-describe('ManageClassroomComponent', () => {
-  let component: ManageClassroomComponent;
-  let fixture: ComponentFixture<ManageClassroomComponent>;
+describe('UpdateEventComponent', () => {
+  let component: UpdateEventComponent;
+  let fixture: ComponentFixture<UpdateEventComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManageClassroomComponent ]
+      declarations: [ UpdateEventComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ManageClassroomComponent);
+    fixture = TestBed.createComponent(UpdateEventComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

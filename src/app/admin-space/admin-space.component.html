@@ -39,12 +39,15 @@
         </div>
         <!--== DASHBOARD INFO ==-->
         <div class="sb2-2-1">
+          <p class="move_date">{{myDate | date: 'd/M/yy, h:mm a'}}</p>
           <h2>Admin Dashboard</h2>
-          <p>Welcome to your space! manage everything here!</p>
+          <p>Welcome to your space!</p>
+
+
           <div class="db-2">
             <ul>
               <li class="mr-4">
-                <!-- Card -->
+                <!-- Card Account -->
                 <mdb-card>
                   <div
                     class="view rgba-white-slight waves-light"
@@ -77,8 +80,8 @@
                 <!-- Card -->
               </li>
               
-              <li class="ml-4">
-                <!-- Card -->
+              <li>
+                <!-- Card About-->
                 <mdb-card>
                   <div
                     class="view rgba-white-slight waves-light"
@@ -105,10 +108,47 @@
                       Some indications on the functionalities of this application.
                     </mdb-card-text>
 
-                    <a href="#" mdbBtn color="primary" mdbWavesEffect>Click</a>
+                    <a href="https://docs.google.com/forms/d/1fM3NFDYu0EgPSAVpR77UeiIqZX6gaXNOkSqg1Gsqn94/edit" mdbBtn color="primary" mdbWavesEffect>Click</a>
                   </mdb-card-body>
                 </mdb-card>
                 <!-- Card -->
+
+                <li class="ml-4">
+                  <!-- Card Meet-->
+                  <mdb-card>
+                    <div
+                      class="view rgba-white-slight waves-light"
+                      mdbWavesEffect
+                    >
+                      <!-- Card img -->
+                      <mdb-card-img
+                        src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                        alt="Card image cap"
+                      ></mdb-card-img>
+                      <a>
+                        <div class="mask"></div>
+                      </a>
+                    </div>
+                    <!--Card content-->
+                    <mdb-card-body>
+                      <!--Title-->
+                      <mdb-card-title>
+                        <h4>Create a meeting</h4>
+                      </mdb-card-title>
+  
+                      <!--Text-->
+                      <mdb-card-text>
+                        Create a meeting with the students, teachers to discuss on topics...
+                      </mdb-card-text>
+  
+                      
+                      <button mat-raised-button (click)="meetSupport()" mdbBtn color="primary" mdbWavesEffect>
+                        Meeting link
+                      </button>
+                    </mdb-card-body>
+                  </mdb-card>
+                  <!-- Card -->
+               
               </li>
             </ul>
           </div>

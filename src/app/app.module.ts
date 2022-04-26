@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+import { NgWhiteboardModule } from 'ng-whiteboard';
+
 //--------------------------
 //This is the importation in the last project
 
@@ -43,7 +45,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AdminSpaceComponent } from './admin-space/admin-space.component';
-import { ManageClassroomComponent } from './admin-space/manage-classroom/manage-classroom.component';
+
 import { ManageTeacherComponent } from './admin-space/manage-teacher/manage-teacher.component';
 import { ManageSubjectComponent } from './admin-space/manage-subject/manage-subject.component';
 import { ManageCalendarComponent } from './admin-space/manage-calendar/manage-calendar.component';
@@ -76,15 +78,18 @@ import { TeacherDetailsComponent } from './admin-space/manage-teacher/teacher-de
 import { LoginTeacherComponent } from './login-all/login-teacher/login-teacher.component';
 import { CreateSubjectComponent } from './admin-space/manage-subject/create-subject/create-subject.component';
 import { UpdateSubjectComponent } from './admin-space/manage-subject/update-subject/update-subject.component';
-import { TimeTableFilter } from './pipe.filter';
-import { CreateCalendarComponent } from './admin-space/manage-calendar/create-calendar/create-calendar.component';
-import { UpdateCalendarComponent } from './admin-space/manage-calendar/update-calendar/update-calendar.component';
+import { TimeTableFilter } from './pipe.filter'
 import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarteacher.component';
 import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from './teacherspace/exams/exams.component';
 import { ClassroomComponent } from './teacherspace/classroom/classroom.component';
 import { ManageAdminAccountComponent } from './admin-space/manage-admin-account/manage-admin-account.component';
 import { UpdateAccountComponent } from './admin-space/manage-admin-account/update-account/update-account.component';
+import { ManageEventsComponent } from './admin-space/manage-events/manage-events.component';
+import { EventDetailsComponent } from './admin-space/manage-events/event-details/event-details.component';
+import { UpdateEventComponent } from './admin-space/manage-events/update-event/update-event.component';
+import { CreateEventComponent } from './admin-space/manage-events/create-event/create-event.component';
+import { ManageNotesComponent } from './admin-space/manage-notes/manage-notes.component';
 
 
 
@@ -100,7 +105,6 @@ FullCalendarModule.registerPlugins([
     AppComponent,
     HomeComponent,
     AdminSpaceComponent,
-    ManageClassroomComponent,
     ManageTeacherComponent,
     ManageSubjectComponent,
     ManageCalendarComponent,
@@ -133,11 +137,14 @@ FullCalendarModule.registerPlugins([
     CreateSubjectComponent,
     UpdateSubjectComponent,
     TimeTableFilter,
-    CreateCalendarComponent,
-    UpdateCalendarComponent,
     ClassroomComponent,
     ManageAdminAccountComponent,
-    UpdateAccountComponent
+    UpdateAccountComponent,
+    ManageEventsComponent,
+    EventDetailsComponent,
+    UpdateEventComponent,
+    CreateEventComponent,
+    ManageNotesComponent,
   ],
 
   imports: [
@@ -155,6 +162,8 @@ FullCalendarModule.registerPlugins([
     Ng2SearchPipeModule,
     MDBBootstrapModule,
     MatCardModule,
+
+    NgWhiteboardModule,
 
     //OLD CODE MABY WILL BE NEEDED
 

@@ -1,0 +1,106 @@
+<body>
+    <div class="container-fluid sb1">
+        <div class="row">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+
+             <!--  <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a> -->
+
+                <a href="index-2.html" class=""><img src="assets/images/logo1.png" alt="" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--== BODY CONTNAINER ==-->
+    <div class="container-fluid sb2 ">
+        <div >
+            <div class="sb2-1 ">
+                <app-side-bar></app-side-bar>
+            </div>
+            <!--== BODY INNER CONTAINER ==-->
+            <div class="sb2-2">
+                <!--== breadcrumbs ==-->
+                <div class="sb2-2-2">
+                    <ul>
+                        <li><a href="index-2.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre"><a href="#"> Update Event Informations</a>
+                        </li>
+                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--== User Details ==-->
+                <div class="sb2-2-3">
+                    <div class="row">
+                        <div class="col-md-12">
+						<div class="box-inn-sp admin-form container-fluid">
+                                <div class="inn-title">
+                                    <h4>Update Event Informations</h4>
+                                    
+                                </div>
+                                <div class="tab-inn">
+                                    <div class="col-md-6 offset-md-3">
+                                        <h3 class="style-title-form"> Update Event: {{event.nameEvent}} </h3>
+                                        <div >
+                                            <form (ngSubmit) = "onSubmit()" [formGroup]="createEvent">
+                                        
+                                                <div class="form-group mt-4">
+                                                    <label>Duration</label>
+                                                    <input formControlName="duration" type="text" class ="form-control" id = "duration"
+                                                        [(ngModel)] = "event.duration" name = "duration" >
+                                                    <span *ngIf="duration?.invalid && duration?.touched" class="text-danger">Duration is required!</span>
+                          
+                                                </div>
+                                            
+                                                <div class="form-group">
+                                                    <label> Description </label>
+                                                    <input formControlName="description" type="text" class ="form-control" id = "description"
+                                                        [(ngModel)] = "event.description" name = "Description">
+                                                    <span *ngIf="description?.invalid && description?.touched" class="text-danger">Description  is required!</span>
+                                                </div>
+
+                                                <div class="form-group mt-4">
+                                                    <label>Day</label>
+                                                    <input formControlName="day" type="text" class ="form-control" id = "dayEvent"
+                                                        [(ngModel)] = "event.dayEvent" name = "dayEvent" >
+                                                    <span *ngIf="day?.invalid && day?.touched" class="text-danger">Day is required!</span>
+                                                </div>
+
+                                                <div class="form-group mt-4">
+                                                    <label>Month</label>
+                                                    <input formControlName="month" type="text" class ="form-control" id = "monthEvent"
+                                                        [(ngModel)] = "event.monthEvent" name = "monthEvent" >
+                                                    <span *ngIf="month?.invalid && month?.touched" class="text-danger">Month is required!</span>
+                                                </div>
+
+                                                <div class="form-group mt-4">
+                                                    <label>Year</label>
+                                                    <input formControlName="year" type="text" class ="form-control" id = "yearEvent"
+                                                        [(ngModel)] = "event.yearEvent" name = "yearEvent" >
+                                                    <span *ngIf="year?.invalid && year?.touched" class="text-danger">Year is required!</span>
+                          
+                                                </div>
+    
+                                            
+                                                <button class = "btn btn-success mb-4" type ="submit">Submit</button>
+                                            
+                                            </form>
+
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>

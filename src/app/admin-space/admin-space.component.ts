@@ -9,4 +9,10 @@ export class AdminSpaceComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  myDate: Date = new Date();
+
+  meetSupport(){
+    location.href = "https://accounts.google.com/AccountChooser/signinchooser?continue=https://g.co/meet/Administration";
+ }
 }

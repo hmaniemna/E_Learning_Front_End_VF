@@ -39,27 +39,25 @@
                         <div class="col-md-12">
 						<div class="box-inn-sp admin-form">
                                 <div class="inn-title">
-                                    <h4>View Student Informations</h4>
-                                    <p>Here you can edit your website basic details URL, Phone, Email, Address, User and password and more</p>
+                                    <h4>View event: {{event.nameEvent}}</h4>
+                                   
                                 </div>
                                 <div class="tab-inn">
 
                                     <div class="style_info">
                                         <div >
-                                            <label> <b> First Name: </b></label> {{student.firstName}}
+                                            <label> <b> Date: </b></label><p class="content_event"> {{event.dayEvent}}/{{event.monthEvent}}/{{event.yearEvent}} </p>
                                         </div>
                                         <div>
-                                            <label> <b> Last Name: </b></label> {{student.lastName}}
+                                            <label> <b> Duration: </b></label> <p class="content_event"> {{event.duration}} h </p>
                                         </div>
                                         <div>
-                                            <label> <b> Email: </b></label> {{student.email}}
+                                            <label> <b> Description: </b></label> <p class="content_event"> {{event.description}} </p>
                                         </div>
                                         <div>
-                                            <label> <b> Group: </b></label> {{student.group.nameG}}
+                                            <label> <b> Link: </b></label> <p class="content_event"> {{event.link}} </p>
                                         </div>
-                                        <div>
-                                            <label> <b> Level: </b></label> {{student.group.levelG}}
-                                        </div>
+                                       
                                     </div>
                                     
                                 </div>
@@ -74,4 +72,3 @@
 
 
 </body>
-

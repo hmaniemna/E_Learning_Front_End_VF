@@ -10,7 +10,14 @@ import { Course } from '../classes/course';
 export class TeacherService {
 
   private baseUrl="http://localhost:8080/api/v1/teachers"
+  private baseUrl1="http://localhost:8080/api/v1/teachers/connect"
   constructor(private httpClient:HttpClient) { }
+
+  //login to pass the data from the server to the controllers
+  teacherLogin(emailId:String): Observable<Object> {
+    console.log(emailId);
+    return this.httpClient.get(`${this.baseUrl1}/${emailId}`);
+  }
 
   //return the teacher list
   getTeacherList():Observable<Teacher[]>{

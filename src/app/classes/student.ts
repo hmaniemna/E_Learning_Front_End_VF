@@ -2,11 +2,11 @@ import { Group } from "../classes/group";
 
 export class Student {
     idS!: number;
-    firstName!: string;
-    lastName!: string;
-    emailId!: string;
+    firstName!: String;
+    lastName!: String;
+    email!: String;
     group!: Group;
-    password!: string;
+    password!: String;
     accessCode!: number;
 }
 export const Level=[1,2,3];

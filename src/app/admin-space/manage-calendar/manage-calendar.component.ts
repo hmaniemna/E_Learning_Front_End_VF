@@ -23,14 +23,14 @@ export class ManageCalendarComponent implements OnInit {
   course = new Course();
   isDataAvailable: boolean = false;
   timeTableS!:TimeTable[];
-
+  timetable=new TimeTable();
   searchText!:String;
 
  constructor(private router: Router,private _snackBar: MatSnackBar,private route: ActivatedRoute, private timeTableService: TimeTableService,private courseService: CourseService,
   private time:TimeTableFilter) { }
 
  ngOnInit(): void {
- this.getCourses();
+ //this.getCourses();
  this.getTimeTables();
 
  this.time.transform(this.timeTableS,this.searchText);
@@ -44,13 +44,13 @@ export class ManageCalendarComponent implements OnInit {
     });
   }
 
-  getCourses(){
+  /*getCourses(){
     this.course_id = this.route.snapshot.params['id'];
     this.courseService.getCourseById(this.course_id).subscribe(data => {
       this.course = data; 
 
     });
-  }
+  }*/
 
 
  openSnackBar(message: string, action: string) {

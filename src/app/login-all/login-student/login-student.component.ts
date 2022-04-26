@@ -22,8 +22,8 @@ student:Student = new Student();
 
 
   loginStudent(){
-    console.log(this.student.emailId,this.student.password);
-    this.studentService.studentLogin(this.student.emailId,this.student.password).subscribe(data=> {
+    console.log(this.student.email,this.student.password);
+    this.studentService.studentLogin(this.student.email,this.student.password).subscribe(data=> {
       alert("Login operation successful!")
       //to navigate to another page
       this.router.navigate(['/student-space']);

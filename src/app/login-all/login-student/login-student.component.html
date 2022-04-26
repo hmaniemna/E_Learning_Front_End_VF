@@ -19,16 +19,11 @@
                      <form class="s12" (ngSubmit)="loginStudent()">
                          <div>
                              <div class="input-field s12">
-                                 <input type="text" data-ng-model="name" [(ngModel)]="student.firstName" class="form-control" id="firstName" name="lastName">
-                                 <label class="">User firstname</label>
+                                 <input type="email" data-ng-model="name" [(ngModel)]="student.email" class="form-control" id="email" name="email">
+                                 <label class="">Email</label>
                              </div>
                          </div>
-                         <div>
-                            <div class="input-field s12">
-                                <input type="text" data-ng-model="name" [(ngModel)]="student.lastName" class="form-control" id="lastName" name="lastName">
-                                <label class="">User lastname</label>
-                            </div>
-                        </div>
+                         
                          <div>
                              <div class="input-field s12">
                                  <input type="password" [(ngModel)]="student.password" class="form-control" id="password" name="password">
