@@ -1,3 +1,4 @@
+
 import { SidebarteacherComponent } from './../teacherspace/sidebarteacher/sidebarteacher.component';
 import { Routes } from '@angular/router';
 
@@ -29,7 +30,8 @@ import { CreateSubjectComponent } from '../admin-space/manage-subject/create-sub
 import { UpdateSubjectComponent } from '../admin-space/manage-subject/update-subject/update-subject.component';
 import { CreateCalendarComponent } from '../admin-space/manage-calendar/create-calendar/create-calendar.component';
 import { UpdateCalendarComponent } from '../admin-space/manage-calendar/update-calendar/update-calendar.component';
-
+import {ClassroomTeacherComponent}from '../teacherspace/classroom-teacher/classroom-teacher.component';
+import { ChatComponent } from '../chat/chat.component';
 
 export const routes: Routes = [
 
@@ -37,6 +39,8 @@ export const routes: Routes = [
     { path: 'home',  component: HomeComponent },
     {path: 'sections',  component: SectionsComponent },
 
+    {path: 'classroom-teacher' , component:ClassroomTeacherComponent},
+    {path: 'chat',  component: ChatComponent},
     {path: 'admin-space',  component: AdminSpaceComponent},
     { path: 'login-admin',  component: LoginAdminComponent },
 

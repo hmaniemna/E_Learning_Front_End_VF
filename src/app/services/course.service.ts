@@ -7,12 +7,15 @@ import { Course } from '../classes/course';
   providedIn: 'root'
 })
 export class CourseService {
+  static getCoursesByTeacherId(id: any): Course[] {
+    throw new Error('Method not implemented.');
+  }
 
   private baseUrl= "http://localhost:8080/api/v1/courses"
 
   constructor(private httpClient: HttpClient) { }
 
-  //return the Course list 
+  //return the Course list
   getCourseList():Observable<Course[]>{
     return this.httpClient.get<Course[]>(`${this.baseUrl}`);
   }

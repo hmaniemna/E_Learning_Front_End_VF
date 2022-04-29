@@ -1,5 +1,5 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule  } from '@angular/platform-browser';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -9,7 +9,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
 //--------------------------
 //This is the importation in the last project
 
@@ -76,7 +76,9 @@ import { UpdateCalendarComponent } from './admin-space/manage-calendar/update-ca
 import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarteacher.component';
 import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from './teacherspace/exams/exams.component';
-import { ClassroomComponent } from './teacherspace/classroom/classroom.component';
+
+import { ClassroomTeacherComponent } from './teacherspace/classroom-teacher/classroom-teacher.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 
@@ -119,7 +121,7 @@ FullCalendarModule.registerPlugins([
     SidebarteacherComponent,
     AddexamComponent,
     ExamsComponent,
-
+TeacherspaceComponent,
 
 
     CreateSubjectComponent,
@@ -127,7 +129,9 @@ FullCalendarModule.registerPlugins([
     TimeTableFilter,
     CreateCalendarComponent,
     UpdateCalendarComponent,
-    ClassroomComponent
+
+    ClassroomTeacherComponent,
+      ChatComponent
   ],
 
   imports: [

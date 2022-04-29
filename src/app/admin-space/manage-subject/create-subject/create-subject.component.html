@@ -44,36 +44,36 @@
                                 </div>
                                 <div class="tab-inn">
                                     <div>
-                                        
+
                                         <form (ngSubmit) = "onSubmit()" [formGroup]="createSubject">
-                                        
-                                        
-                                        
+
+
+
                                             <div class="form-group">
                                                 <label> Title </label>
                                                 <input formControlName="NameSub" type="text" class ="form-control" id = "NameSub"
-                                                    [(ngModel)] = "subject.title" name = "NameSub">
+                                                    [(ngModel)] = "course.title" name = "NameSub">
                                                 <span *ngIf="NameSub?.invalid && NameSub?.touched" class="text-danger">title  is required!</span>
                                             </div>
 
                                             <div class="form-group">
                                                 <label> Year </label>
                                                 <input formControlName="year" type="text" class ="form-control" id = "year"
-                                                    [(ngModel)] = "subject.year" name = "year">
+                                                    [(ngModel)] = "course.year" name = "year">
                                                 <span *ngIf="yearS?.invalid && yearS?.touched" class="text-danger">year  is required!</span>
                                             </div>
                                             <div class="form-group">
                                                 <label> Teacher</label>
                                                 <input formControlName="teacher" type="text" class ="form-control" id = "teacher"
-                                                    [(ngModel)] = "subject.teacher.fullName" name = "teacher">
-                                                <span *ngIf="teach?.invalid && teach?.touched" class="text-danger">teacher name  is required!</span>
+                                                    [(ngModel)] = "course.teacher.fullName" name = "teacher">
+                                            <span *ngIf="teach?.invalid && teach?.touched" class="text-danger">teacher name  is required!</span>
                                             </div>
-                                        
-                                        
+
+
                                             <button class = "btn btn-success" type ="submit">Submit</button>
-                                        
+
                                         </form>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
