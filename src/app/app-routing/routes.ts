@@ -34,9 +34,10 @@ import { EventDetailsComponent } from '../admin-space/manage-events/event-detail
 import { UpdateEventComponent } from '../admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from '../admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from '../admin-space/manage-notes/manage-notes.component';
+import { SchedulerCalComponent } from '../admin-space/scheduler/scheduler-cal/scheduler-cal.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/scheduler-cal', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'sections', component: SectionsComponent },
 
@@ -75,6 +76,7 @@ export const routes: Routes = [
   { path: 'create-event', component: CreateEventComponent },
 
   { path: 'manage-notes', component: ManageNotesComponent },
+  {path: 'scheduler-cal', component:SchedulerCalComponent},
 
 
   //all the paths related to the teacher

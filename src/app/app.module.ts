@@ -90,9 +90,11 @@ import { EventDetailsComponent } from './admin-space/manage-events/event-details
 import { UpdateEventComponent } from './admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from './admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from './admin-space/manage-notes/manage-notes.component';
+import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
 
 
-
+import {DayPilotModule} from "daypilot-pro-angular";
+import { SchedulerCalComponent } from './admin-space/scheduler/scheduler-cal/scheduler-cal.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -102,6 +104,8 @@ FullCalendarModule.registerPlugins([
 
 @NgModule({
   declarations: [
+    SchedulerCalComponent,
+
     AppComponent,
     HomeComponent,
     AdminSpaceComponent,
@@ -131,7 +135,7 @@ FullCalendarModule.registerPlugins([
     SidebarteacherComponent,
     AddexamComponent,
     ExamsComponent,
-
+    
 
 
     CreateSubjectComponent,
@@ -145,9 +149,13 @@ FullCalendarModule.registerPlugins([
     UpdateEventComponent,
     CreateEventComponent,
     ManageNotesComponent,
+    
+    TeacherspaceComponent,
   ],
 
   imports: [
+    DayPilotModule,
+
 
     BrowserModule,
     AppRoutingModule,
@@ -183,12 +191,10 @@ FullCalendarModule.registerPlugins([
     MatDialogModule,
     MatSidenavModule*/
 
-
-
-
-
-  ],
-  providers: [TimeTableFilter,],
+],
+  providers: [TimeTableFilter,
+  //DataService
+],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
