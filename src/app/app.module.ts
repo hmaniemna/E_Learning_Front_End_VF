@@ -1,9 +1,6 @@
-//SHIFT + ALT + F => PRETTIER **********
-
-
-
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +10,6 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
 import { NgWhiteboardModule } from 'ng-whiteboard';
 
 //--------------------------
@@ -91,6 +87,15 @@ import { UpdateEventComponent } from './admin-space/manage-events/update-event/u
 import { CreateEventComponent } from './admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from './admin-space/manage-notes/manage-notes.component';
 
+import {SideBarSComponent} from './student-space/side-bar-s/side-bar-s.component';
+import {DashboardSComponent} from './student-space/dashboard-s/dashboard-s.component';
+import {ProfileSComponent} from './student-space/profile-s/profile-s.component';
+import {EventsSComponent} from './student-space/events-s/events-s.component';
+import {TestsSComponent}from './student-space/tests-s/tests-s.component';
+import {TimeLineSComponent} from './student-space/time-line-s/time-line-s.component';
+import { CalendarSComponent} from './student-space/calendar-s/calendar-s.component';
+import {ArticlesSComponent} from './student-space/articles-s/articles-s.component';
+import {ClassroomSComponent} from './student-space/classroom-s/classroom-s.component';
 
 
 
@@ -145,6 +150,16 @@ FullCalendarModule.registerPlugins([
     UpdateEventComponent,
     CreateEventComponent,
     ManageNotesComponent,
+
+    SideBarSComponent,
+    DashboardSComponent,
+    ProfileSComponent,
+    TestsSComponent,
+    CalendarSComponent,
+    ArticlesSComponent,
+    EventsSComponent,
+    TimeLineSComponent,
+    ClassroomComponent,
   ],
 
   imports: [
@@ -164,6 +179,7 @@ FullCalendarModule.registerPlugins([
     MatCardModule,
 
     NgWhiteboardModule,
+
 
     //OLD CODE MABY WILL BE NEEDED
 

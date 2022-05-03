@@ -1,1 +1,58 @@
-<p>student-space works!</p>
+<body>
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1" style="height: 8%;">
+        <div class="row">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                
+                <a href="index-2.html" class="logo"><img src="assets/images/logo1.png" alt="" />
+                </a>
+            </div>
+            <!--== MY ACCCOUNT ==-->
+            <div  class="text">
+                <!-- Dropdown Trigger -->
+                <a href='/student-profile' data-activates='top-menu' ><img src="assets/images/user/6.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid sb2">
+        <div>
+            <div class="sb2-1">
+            <app-side-bar-s></app-side-bar-s>
+            </div>
+
+            <!--== BODY INNER CONTAINER ==-->
+            <div class="sb2-2">
+                <!--== breadcrumbs ==-->
+                <div class="sb2-2-2">
+                    <ul>
+                        <li><a href="index-2.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre"><a href="#"> Dashboard</a>
+                        </li>
+                        <li class="page-back"><a href="index-2.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+                        </li>
+                    </ul>
+                </div>
+
+          
+                <!--== DASHBOARD INFO ==-->
+              
+                   <div class="stu-db">
+                    <div class="container pg-inn">
+                        <div class="col-md-9">
+                            <div class="udb">
+                               <app-dashboard-s></app-dashboard-s>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+</body>

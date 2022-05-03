@@ -19,8 +19,8 @@ export class LoginTeacherComponent implements OnInit {
   }
 
   loginTeacher(){
-    console.log(this.teacher);
-    this.teacherService.teacherLogin(this.teacher.emailId).subscribe(data=> {
+    console.log(this.teacher.emailId, this.teacher.password);
+    this.teacherService.teacherLogin(this.teacher.emailId, this.teacher.password).subscribe(data=> {
       alert("Login operation successful!");
       this.goToTeacherSpace();
     },

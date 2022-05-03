@@ -34,6 +34,15 @@ import { EventDetailsComponent } from '../admin-space/manage-events/event-detail
 import { UpdateEventComponent } from '../admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from '../admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from '../admin-space/manage-notes/manage-notes.component';
+import { StudentSpaceComponent} from '../student-space/student-space.component';
+import { DashboardSComponent } from '../student-space/dashboard-s/dashboard-s.component';
+import { ProfileSComponent } from '../student-space/profile-s/profile-s.component';
+import { ClassroomSComponent } from '../student-space/classroom-s/classroom-s.component';
+import { CalendarSComponent } from '../student-space/calendar-s/calendar-s.component';
+import { TimeLineSComponent } from '../student-space/time-line-s/time-line-s.component';
+import { EventsSComponent } from '../student-space/events-s/events-s.component';
+import { TestsSComponent } from '../student-space/tests-s/tests-s.component';
+import { ArticlesSComponent } from '../student-space/articles-s/articles-s.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -83,4 +92,17 @@ export const routes: Routes = [
   { path: 'addexam', component: AddexamComponent },
   { path: 'exams', component: ExamsComponent },
   { path: 'liststudents', component: TeacherspaceComponent },
+
+
+
+
+      //all the paths related to the student space
+      {path: 'student-space', component: StudentSpaceComponent },
+      {path: 'student-profile', component: ProfileSComponent },
+      {path: 'student-classroom', component: ClassroomSComponent },
+      {path: 'student-calendar', component: CalendarSComponent },
+      {path: 'student-timeLine', component: TimeLineSComponent },
+      {path: 'student-events', component: EventsSComponent},
+      {path: 'student-tests', component: TestsSComponent},
+      {path: 'student-articles', component: ArticlesSComponent },
 ];
