@@ -34,18 +34,19 @@ import { EventDetailsComponent } from '../admin-space/manage-events/event-detail
 import { UpdateEventComponent } from '../admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from '../admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from '../admin-space/manage-notes/manage-notes.component';
-import { StudentSpaceComponent} from '../student-space/student-space.component';
-import { DashboardSComponent } from '../student-space/dashboard-s/dashboard-s.component';
-import { ProfileSComponent } from '../student-space/profile-s/profile-s.component';
-import { ClassroomSComponent } from '../student-space/classroom-s/classroom-s.component';
-import { CalendarSComponent } from '../student-space/calendar-s/calendar-s.component';
-import { TimeLineSComponent } from '../student-space/time-line-s/time-line-s.component';
-import { EventsSComponent } from '../student-space/events-s/events-s.component';
-import { TestsSComponent } from '../student-space/tests-s/tests-s.component';
+import { SchedulerCalComponent } from '../admin-space/scheduler/scheduler-cal/scheduler-cal.component';
+
+import { StudentSpaceComponent } from '../student-space/student-space.component';
 import { ArticlesSComponent } from '../student-space/articles-s/articles-s.component';
+import { CalendarSComponent } from '../student-space/calendar-s/calendar-s.component';
+import { ClassroomSComponent } from '../student-space/classroom-s/classroom-s.component';
+import { ProfileSComponent } from '../student-space/profile-s/profile-s.component';
+import { EventsSComponent } from '../student-space/events-s/events-s.component';
+import { TimeLineSComponent } from '../student-space/time-line-s/time-line-s.component';
+import { TestsSComponent } from '../student-space/tests-s/tests-s.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/scheduler-cal', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'sections', component: SectionsComponent },
 
@@ -84,6 +85,7 @@ export const routes: Routes = [
   { path: 'create-event', component: CreateEventComponent },
 
   { path: 'manage-notes', component: ManageNotesComponent },
+  {path: 'scheduler-cal', component:SchedulerCalComponent},
 
 
   //all the paths related to the teacher

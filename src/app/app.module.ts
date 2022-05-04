@@ -1,7 +1,5 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
@@ -11,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgWhiteboardModule } from 'ng-whiteboard';
+import { DataService } from './services/data.service';
 
 //--------------------------
 //This is the importation in the last project
@@ -86,6 +85,7 @@ import { EventDetailsComponent } from './admin-space/manage-events/event-details
 import { UpdateEventComponent } from './admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from './admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from './admin-space/manage-notes/manage-notes.component';
+import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
 
 import {SideBarSComponent} from './student-space/side-bar-s/side-bar-s.component';
 import {DashboardSComponent} from './student-space/dashboard-s/dashboard-s.component';
@@ -97,7 +97,9 @@ import { CalendarSComponent} from './student-space/calendar-s/calendar-s.compone
 import {ArticlesSComponent} from './student-space/articles-s/articles-s.component';
 import {ClassroomSComponent} from './student-space/classroom-s/classroom-s.component';
 
-
+ 
+import {DayPilotModule} from "daypilot-pro-angular";
+import { SchedulerCalComponent } from './admin-space/scheduler/scheduler-cal/scheduler-cal.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -107,6 +109,7 @@ FullCalendarModule.registerPlugins([
 
 @NgModule({
   declarations: [
+    SchedulerCalComponent,
     AppComponent,
     HomeComponent,
     AdminSpaceComponent,
@@ -136,7 +139,7 @@ FullCalendarModule.registerPlugins([
     SidebarteacherComponent,
     AddexamComponent,
     ExamsComponent,
-
+    
 
 
     CreateSubjectComponent,
@@ -151,6 +154,7 @@ FullCalendarModule.registerPlugins([
     CreateEventComponent,
     ManageNotesComponent,
 
+
     SideBarSComponent,
     DashboardSComponent,
     ProfileSComponent,
@@ -159,10 +163,14 @@ FullCalendarModule.registerPlugins([
     ArticlesSComponent,
     EventsSComponent,
     TimeLineSComponent,
-    ClassroomComponent,
+    ClassroomSComponent,
+
+    TeacherspaceComponent,
   ],
 
   imports: [
+    DayPilotModule,
+
 
     BrowserModule,
     AppRoutingModule,
@@ -179,6 +187,7 @@ FullCalendarModule.registerPlugins([
     MatCardModule,
 
     NgWhiteboardModule,
+    
 
 
     //OLD CODE MABY WILL BE NEEDED
@@ -199,12 +208,10 @@ FullCalendarModule.registerPlugins([
     MatDialogModule,
     MatSidenavModule*/
 
-
-
-
-
-  ],
-  providers: [TimeTableFilter,],
+],
+  providers: [TimeTableFilter,
+  DataService
+],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
