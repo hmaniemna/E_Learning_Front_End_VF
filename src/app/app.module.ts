@@ -79,6 +79,8 @@ import { ExamsComponent } from './teacherspace/exams/exams.component';
 
 import { ClassroomTeacherComponent } from './teacherspace/classroom-teacher/classroom-teacher.component';
 import { ChatComponent } from './chat/chat.component';
+import { EventsComponent } from './events/events.component';
+import { EventComponent } from './event/event.component';
 
 
 
@@ -131,7 +133,9 @@ TeacherspaceComponent,
     UpdateCalendarComponent,
 
     ClassroomTeacherComponent,
-      ChatComponent
+      ChatComponent,
+      EventsComponent,
+      EventComponent
   ],
 
   imports: [

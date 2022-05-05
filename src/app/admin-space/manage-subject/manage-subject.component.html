@@ -55,7 +55,7 @@
                                             <tr>
                                                 <th> subject name</th>
                                                 <th>Year</th>
-                                                <th>Teacher</th>
+                                                <th>description</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -63,7 +63,7 @@
                                          <tr *ngFor= "let subject of subjects">
                                            <td> {{ subject.title }} </td>
                                            <td>{{subject.year}}</td>
-                                           <td>{{subject.teacher.fullName}}</td>
+                                           <td>{{subject.description}}</td>
 
                                           <td>
                                             <button (click)= "updateSubject(subject.idCourse)" class="btn btn-info">update</button>

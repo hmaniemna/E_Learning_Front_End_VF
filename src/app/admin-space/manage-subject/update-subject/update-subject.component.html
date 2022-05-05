@@ -65,7 +65,7 @@
                                             <div class="form-group">
                                                 <label> Teacher</label>
                                                 <input formControlName="teacher" type="text" class ="form-control" id = "teacher"
-                                                    [(ngModel)] = "subject.teacher.fullName" name = "teacher">
+                                                    [(ngModel)] = "subject.idteacher" name = "teacher">
                                                 <span *ngIf="teach?.invalid && teach?.touched" class="text-danger">teacher name  is required!</span>
                                             </div>
 

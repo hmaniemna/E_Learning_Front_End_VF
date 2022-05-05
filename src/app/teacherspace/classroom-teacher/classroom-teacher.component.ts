@@ -5,6 +5,8 @@ import {Course}from 'src/app/classes/course';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CourseService } from 'src/app/services/course.service';
+import {EventService } from 'src/app/services/event.service';
+import { Event } from 'src/app/classes/event';
 
 @Component({
   selector: 'app-classroom-teacher',
@@ -22,8 +24,10 @@ currentFile?: File;
 progress = 0;
 message = '';
 course = new Course();
-  constructor(private courseservice : CourseService , private router: Router , private route: ActivatedRoute , private docservice : DocService) {
-    this.fileInfos = this.docservice.getAlldoc();}
+events!:Event[];
+  constructor(private courseservice : CourseService , private eventService:EventService ,  private router: Router , private route: ActivatedRoute , private docservice : DocService) {
+    this.fileInfos = this.docservice.getAlldoc();
+    this.getEvents();}
 
 selectFile(event: any): void {
     this.selectedFiles = event.target.files;
@@ -37,8 +41,14 @@ selectFile(event: any): void {
     })
   }
   meetSupport(){
-    location.href = "https://accounts.google.com/AccountChooser/signinchooser?continue=https://g.co/meet/Administration";
+    location.href = "https://accounts.google.com/AccountChooser/signinchooser?continue=https://g.co/meet/Course";
  }
+  //show the list of groups
+  getEvents(){
+    return this.eventService.getEventList().subscribe(data =>{
+      this.events=data;
+    });
+    }
 
   upload(): void {
     this.progress = 0;

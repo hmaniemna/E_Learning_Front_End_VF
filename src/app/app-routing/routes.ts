@@ -1,7 +1,7 @@
 
 import { SidebarteacherComponent } from './../teacherspace/sidebarteacher/sidebarteacher.component';
 import { Routes } from '@angular/router';
-
+import {EventsComponent} from '../events/events.component';
 import { HomeComponent } from '../home/home.component';
 import { AdminSpaceComponent } from '../admin-space/admin-space.component';
 import { LoginStudentComponent } from '../login-all/login-student/login-student.component';
@@ -35,11 +35,11 @@ import { ChatComponent } from '../chat/chat.component';
 
 export const routes: Routes = [
 
-    { path: '', redirectTo: '/teacherspace', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home',  component: HomeComponent },
     {path: 'sections',  component: SectionsComponent },
 
-    {path: 'classroom-teacher' , component:ClassroomTeacherComponent},
+    {path: 'classroom-teacher/:id' , component:ClassroomTeacherComponent},
     {path: 'chat',  component: ChatComponent},
     {path: 'admin-space',  component: AdminSpaceComponent},
     { path: 'login-admin',  component: LoginAdminComponent },
@@ -66,11 +66,11 @@ export const routes: Routes = [
     {path: 'create-group',  component: CreateGroupComponent },
     {path: 'update-group/:id',  component: UpdateGroupComponent },
     {path: 'details-group/:id',  component: DetailsGroupComponent },
-    {path: 'teacherspace',  component: TeacherspaceComponent },
+    {path: 'teacherspace/:id',  component: TeacherspaceComponent },
  { path: 'addexam' , component: AddexamComponent},
 {path : 'exams' , component: ExamsComponent},
     {path: 'liststudents',  component: TeacherspaceComponent },
-
+{path: 'events' , component:EventsComponent },
 
     {path: 'manage-subject', component: ManageSubjectComponent},
     {path: 'create-subject',  component: CreateSubjectComponent },

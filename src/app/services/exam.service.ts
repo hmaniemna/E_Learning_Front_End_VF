@@ -45,7 +45,7 @@ getAlltests(): Observable<any> {
  }
 
 
- deletetest(idS: String):Observable<Object>{
+ deletetest(idS: number):Observable<Object>{
   return this.httpClient.delete(`${this.baseUrl}/deletetest/${idS}`);
 }
 
@@ -53,7 +53,7 @@ gettestById(idS:number):Observable<Exam>{
   return this.httpClient.get<Exam>(`${this.baseUrl}/files/${idS}`);
 
 }
-downloadtest(idS:String): Observable<any> {
+downloadtest(idS:number): Observable<any> {
   return this.httpClient.get(`${this.baseUrl}/downloadFile/${idS}`);
 }
 

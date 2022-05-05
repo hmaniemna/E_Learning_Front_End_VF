@@ -14,10 +14,11 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./teacherspace.component.scss']
 })
 export class TeacherspaceComponent implements OnInit{
-  //id: number = 0;
+  id: number = 0;
 
-  //teacher = new Teacher();
-  courses !: Course[];
+  teacher = new Teacher();
+  courses!: Course[];
+  
 
   constructor(private router: Router , private route: ActivatedRoute,private teacherservice :TeacherService , private courseservice:CourseService) {
 this.getCourses() ;
@@ -29,15 +30,16 @@ this.getCourses() ;
 
 
   ngOnInit(): void {
-   // this.id = this.route.snapshot.params['id'];
-   // this.teacherservice.subscribe(data => {
-     // this.teacher = data});
+    this.id = this.route.snapshot.params['id'];
+ this.teacherservice.getTeacherById(this.id).subscribe(data => {
+  this.teacher = data});
 
 
 
 }
 getCourses(){
-  this.courseservice.getCourseList().subscribe(data => {
+  this.id = this.route.snapshot.params['id'];
+  this.courseservice.getCoursesByTeacherId(this.id).subscribe(data => {
    this.courses = data});
 }
 
