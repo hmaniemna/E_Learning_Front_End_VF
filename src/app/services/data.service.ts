@@ -7,20 +7,21 @@ import {DayPilot} from 'daypilot-pro-angular';
   providedIn: 'root',
 })
 export class DataService {
-  private baseUrl= "http://localhost:8080/api/v1/scheduler"
+  
 
   constructor(private httpClient: HttpClient) { }
 
   getEvents(from: DayPilot.Date, to: DayPilot.Date): Observable<any[]> {
-    return this.httpClient.get("/api/v1/scheduler/events?from=" + from.toString() + "&to=" + to.toString()) as Observable<any>;
+    return this.httpClient.get("http://localhost:8080/api/v1/events?from=" + from.toString() + "&to=" + to.toString()) as Observable<any>;
   }
 
   getResources(): Observable<any[]> {
-    return this.httpClient.get("/api/v1/scheduler/resources") as Observable<any>;
+    return this.httpClient.get("http://localhost:8080/api/v1/TimeIntervals") as Observable<any>;
   }
 
   createEvent(data: EventCreateParams): Observable<EventData> {
-    return this.httpClient.post("/api/v1/scheduler/events/create", data) as Observable<any>;
+    return this.httpClient.post("http://localhost:8080/api/v1/events/create", data) as Observable<any>;
+  
   }
 
   moveEvent(data: EventMoveParams): Observable<EventData> {
@@ -37,7 +38,7 @@ export interface EventCreateParams {
   start: string;
   end: string;
   text: string;
-  resource: string | number;
+  resource: number;
 }
 
 export interface EventMoveParams {

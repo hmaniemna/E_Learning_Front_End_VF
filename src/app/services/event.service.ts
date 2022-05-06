@@ -9,7 +9,7 @@ import { Event } from '../classes/event';
 export class EventService {
 
   
-  private baseUrl= "http://localhost:8080/api/v1/events"
+  private baseUrl= "http://localhost:8080/api/v1/schoolevents"
 
   constructor(private httpClient: HttpClient) { }
 

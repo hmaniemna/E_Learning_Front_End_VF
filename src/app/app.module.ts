@@ -63,7 +63,6 @@ import { FooterHComponent } from './home/footer-h/footer-h.component';
 import { HeaderHComponent } from './home/header-h/header-h.component';
 import { SectionsComponent } from './home/sections/sections.component';
 import { SideBarComponent } from './admin-space/side-bar/side-bar.component';
-import { CalendarComponent } from './admin-space/manage-calendar/calendar/calendar.component';
 import { UpdateStudentComponent } from './admin-space/manage-student/update-student/update-student.component';
 import { StudentDetailsComponent } from './admin-space/manage-student/student-details/student-details.component';
 import { CreateStudentComponent } from './admin-space/manage-student/create-student/create-student.component';
@@ -94,7 +93,6 @@ import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
 
 
 import {DayPilotModule} from "daypilot-pro-angular";
-import { SchedulerCalComponent } from './admin-space/scheduler/scheduler-cal/scheduler-cal.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -104,7 +102,6 @@ FullCalendarModule.registerPlugins([
 
 @NgModule({
   declarations: [
-    SchedulerCalComponent,
 
     AppComponent,
     HomeComponent,
@@ -120,7 +117,6 @@ FullCalendarModule.registerPlugins([
     HeaderHComponent,
     SectionsComponent,
     SideBarComponent,
-    CalendarComponent,
     UpdateStudentComponent,
     StudentDetailsComponent,
     CreateStudentComponent,

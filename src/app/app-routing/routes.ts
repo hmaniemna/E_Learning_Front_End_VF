@@ -7,7 +7,6 @@ import { LoginStudentComponent } from '../login-all/login-student/login-student.
 import { LoginAdminComponent } from '../login-all/login-admin/login-admin.component';
 import { ManageCalendarComponent } from '../admin-space/manage-calendar/manage-calendar.component';
 import { SectionsComponent } from '../home/sections/sections.component';
-import { CalendarComponent } from '../admin-space/manage-calendar/calendar/calendar.component';
 import { ManageStudentComponent } from '../admin-space/manage-student/manage-student.component';
 import { ManageTeacherComponent } from '../admin-space/manage-teacher/manage-teacher.component';
 import { CreateStudentComponent } from '../admin-space/manage-student/create-student/create-student.component';
@@ -34,10 +33,9 @@ import { EventDetailsComponent } from '../admin-space/manage-events/event-detail
 import { UpdateEventComponent } from '../admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from '../admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from '../admin-space/manage-notes/manage-notes.component';
-import { SchedulerCalComponent } from '../admin-space/scheduler/scheduler-cal/scheduler-cal.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/scheduler-cal', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'sections', component: SectionsComponent },
 
@@ -48,7 +46,6 @@ export const routes: Routes = [
   { path: 'update-account/:id', component: UpdateAccountComponent },
 
   { path: 'manage-calendar', component: ManageCalendarComponent },
-  { path: 'calendar', component: CalendarComponent },
 
   { path: 'manage-teacher', component: ManageTeacherComponent },
   { path: 'create-teacher', component: CreateTeacherComponent },
@@ -76,7 +73,6 @@ export const routes: Routes = [
   { path: 'create-event', component: CreateEventComponent },
 
   { path: 'manage-notes', component: ManageNotesComponent },
-  {path: 'scheduler-cal', component:SchedulerCalComponent},
 
 
   //all the paths related to the teacher
