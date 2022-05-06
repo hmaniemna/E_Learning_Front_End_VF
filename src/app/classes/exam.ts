@@ -3,9 +3,7 @@ import { Teacher } from "./teacher";
 
 export class Exam {
   id!:number ;
-testname!:string ;
-
-
+  testname!:string ;
   doc!: Byte[];
 
 }

@@ -24,10 +24,10 @@ export class SchedulerCalComponent  implements AfterViewInit{
 
   config: any = {
     timeHeaders : [
-      {groupBy: "Month", format: "MMMM yyyy"},
-      {groupBy: "Day", format: "d"}
+      //{groupBy: "Month", format: "MMMM yyyy"},
+      {groupBy: "Day", format: "dddd"}
     ],
-    days: 31,
+    days:7,
     startDate: "2019-10-01",
     scale: "Day",
     onTimeRangeSelected: args => {

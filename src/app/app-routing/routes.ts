@@ -46,7 +46,7 @@ import { TimeLineSComponent } from '../student-space/time-line-s/time-line-s.com
 import { TestsSComponent } from '../student-space/tests-s/tests-s.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/scheduler-cal', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'sections', component: SectionsComponent },
 

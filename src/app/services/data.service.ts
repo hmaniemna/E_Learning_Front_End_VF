@@ -7,7 +7,7 @@ import {DayPilot} from 'daypilot-pro-angular';
   providedIn: 'root',
 })
 export class DataService {
-  private baseUrl= "http://localhost:8080/api/v1"
+  
 
   constructor(private httpClient: HttpClient) { }
 

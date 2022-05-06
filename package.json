@@ -30,6 +30,7 @@
     "@fullcalendar/timegrid": "^5.0.0",
     "@ngmodule/material-carousel": "^0.6.0",
     "@okta/okta-auth-js": "5.9.1",
+    "@syncfusion/ej2-angular-schedule": "^20.1.52",
     "@types/chart.js": "^2.9.37",
     "angular-bootstrap-md": "^12.2.0",
     "angular-timeline": "^1.7.0",
