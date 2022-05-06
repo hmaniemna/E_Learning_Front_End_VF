@@ -23,12 +23,12 @@ export class LoginTeacherComponent implements OnInit {
       alert("Login operation successful!")
       //to navigate to another page
       this.gototeacherspace(this.teacher.idT);
-      
+
     },
     error => alert("Error, Please retry!"));  }
 
   gototeacherspace(id : number){
-  this.router.navigate(["teacherspace",id]);
+  this.router.navigate(["/teacherspace/"+id]);
   }
 
 }

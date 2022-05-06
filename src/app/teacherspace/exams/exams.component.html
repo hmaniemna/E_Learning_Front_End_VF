@@ -64,7 +64,7 @@
               <tr *ngFor="let file of fileInfos | async">
 <td> <a>{{ file.name }}</a></td>
 <td><button (click) = "downloadtest(file.id)" class="btn btn-success">Download</button></td>
-<td><button  class="btn btn-info">update</button></td>
+
 <td><button (click) ="deletetest(file.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button></td>
               </tr>
       </tbody>

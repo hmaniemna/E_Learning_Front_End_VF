@@ -52,13 +52,22 @@
                           <div class="ho-event pg-eve-main" *ngFor = "let event of events">
                               <ul>
                                   <li>
-                                      <div class="ho-ev-date pg-eve-date"><span>{{event.dayEvent}}</span>
+                                      <div class="ho-ev-date pg-eve-date"><span>{{event.dayEvent}} , {{event.monthEvent}}</span>
                                       </div>
                                       <div class="ho-ev-link pg-eve-desc">
                                           <a href="event-register.html">
-                                              <h4>{{event.nameEvent}}</h4>
+                                              <h2>{{event.nameEvent}}</h2>
+                                                 
+
                                           </a>
+                                          <a href="event-register.html">
+                                            <h4>{{event.description}}</h4>
+                                            <h2>{{event.link}}</h2>
+                                               
+
+                                        </a>
                                       </div>
+
 
                                   </li>
 
@@ -73,9 +82,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="cor-mid-img">
-                        <img src="assets/images/course.jpg" alt="">
-                    </div>
+                    
                     <div class="cor-con-mid">
                         <div class="cor-p1">
 
@@ -96,7 +103,7 @@
 
                             <h3>courses table:</h3>
 
-                            <ul class="collapsible" data-collapsible="accordion">
+                         <ul class="collapsible" data-collapsible="accordion">
                                 <li>
                                     <div class="collapsible-header active">{{course.year}}</div>
                                     <div class="collapsible-body cor-tim-tab">

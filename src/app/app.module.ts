@@ -73,14 +73,14 @@ import { UpdateSubjectComponent } from './admin-space/manage-subject/update-subj
 import { TimeTableFilter } from './pipe.filter';
 import { CreateCalendarComponent } from './admin-space/manage-calendar/create-calendar/create-calendar.component';
 import { UpdateCalendarComponent } from './admin-space/manage-calendar/update-calendar/update-calendar.component';
-import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarteacher.component';
+
 import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from './teacherspace/exams/exams.component';
 
 import { ClassroomTeacherComponent } from './teacherspace/classroom-teacher/classroom-teacher.component';
 import { ChatComponent } from './chat/chat.component';
 import { EventsComponent } from './events/events.component';
-import { EventComponent } from './event/event.component';
+
 
 
 
@@ -120,7 +120,7 @@ FullCalendarModule.registerPlugins([
     CreateTeacherComponent,
     TeacherDetailsComponent,
     LoginTeacherComponent,
-    SidebarteacherComponent,
+    
     AddexamComponent,
     ExamsComponent,
 TeacherspaceComponent,
@@ -135,7 +135,7 @@ TeacherspaceComponent,
     ClassroomTeacherComponent,
       ChatComponent,
       EventsComponent,
-      EventComponent
+
   ],
 
   imports: [

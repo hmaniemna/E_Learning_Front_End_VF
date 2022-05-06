@@ -8,12 +8,12 @@ import { Event } from '../classes/event';
 })
 export class EventService {
 
-  
-  private baseUrl= "http://localhost:8080/api/v1/events"
+
+  private baseUrl= "http://localhost:8080/api/v1/schoolevents"
 
   constructor(private httpClient: HttpClient) { }
 
-  //return the event list 
+  //return the event list
   getEventList():Observable<Event[]>{
     return this.httpClient.get<Event[]>(`${this.baseUrl}`);
   }
