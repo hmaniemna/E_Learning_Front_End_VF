@@ -9,11 +9,13 @@ import {EventService } from 'src/app/services/event.service';
 import { Event } from 'src/app/classes/event';
 
 @Component({
-  selector: 'app-classroom-s',
-  templateUrl: './classroom-s.component.html',
-  styleUrls: ['./classroom-s.component.scss']
+  selector: 'app-classroom-teacher',
+  templateUrl: './classroom-teacher.component.html',
+  styleUrls: ['./classroom-teacher.component.scss']
 })
-export class ClassroomSComponent implements OnInit {
+export class ClassroomTeacherComponent implements OnInit {
+
+
 
   fileInfos?: Observable<any>;
   selectedFiles?: FileList;
@@ -86,4 +88,14 @@ selectFile(event: any): void {
     }
   }
 
+
 }
+
+
+
+
+
+
+
+
+

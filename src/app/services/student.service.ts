@@ -44,4 +44,7 @@ private baseUrl= "http://localhost:8080/api/v1/students"
   getStudentById(idS:number):Observable<Student>{
     return this.httpClient.get<Student>(`${this.baseUrl}/${idS}`);
   }
+ 
+
+
 }

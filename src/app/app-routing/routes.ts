@@ -1,6 +1,7 @@
+
 import { SidebarteacherComponent } from './../teacherspace/sidebarteacher/sidebarteacher.component';
 import { Routes } from '@angular/router';
-
+import {EventsComponent} from '../events/events.component';
 import { HomeComponent } from '../home/home.component';
 import { AdminSpaceComponent } from '../admin-space/admin-space.component';
 import { LoginStudentComponent } from '../login-all/login-student/login-student.component';
@@ -44,6 +45,9 @@ import { ProfileSComponent } from '../student-space/profile-s/profile-s.componen
 import { EventsSComponent } from '../student-space/events-s/events-s.component';
 import { TimeLineSComponent } from '../student-space/time-line-s/time-line-s.component';
 import { TestsSComponent } from '../student-space/tests-s/tests-s.component';
+import {ClassroomTeacherComponent}from '../teacherspace/classroom-teacher/classroom-teacher.component';
+import { ChatComponent } from '../chat/chat.component';
+
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -58,6 +62,14 @@ export const routes: Routes = [
 
   { path: 'manage-calendar', component: ManageCalendarComponent },
   { path: 'calendar', component: CalendarComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home',  component: HomeComponent },
+    {path: 'sections',  component: SectionsComponent },
+
+    {path: 'classroom-teacher/:id' , component:ClassroomTeacherComponent},
+    {path: 'chat',  component: ChatComponent},
+    {path: 'admin-space',  component: AdminSpaceComponent},
+    { path: 'login-admin',  component: LoginAdminComponent },
 
   { path: 'manage-teacher', component: ManageTeacherComponent },
   { path: 'create-teacher', component: CreateTeacherComponent },
@@ -75,6 +87,7 @@ export const routes: Routes = [
   { path: 'update-group/:id', component: UpdateGroupComponent },
   { path: 'details-group/:id', component: DetailsGroupComponent },
 
+
   { path: 'manage-subject', component: ManageSubjectComponent },
   { path: 'create-subject', component: CreateSubjectComponent },
   { path: 'update-subject/:id', component: UpdateSubjectComponent },
@@ -86,6 +99,17 @@ export const routes: Routes = [
 
   { path: 'manage-notes', component: ManageNotesComponent },
   {path: 'scheduler-cal', component:SchedulerCalComponent},
+
+
+    {path: 'manage-group', component: ManageGroupComponent},
+    {path: 'create-group',  component: CreateGroupComponent },
+    {path: 'update-group/:id',  component: UpdateGroupComponent },
+    {path: 'details-group/:id',  component: DetailsGroupComponent },
+    {path: 'teacherspace/:id',  component: TeacherspaceComponent },
+ { path: 'addexam' , component: AddexamComponent},
+{path : 'exams' , component: ExamsComponent},
+    {path: 'liststudents',  component: TeacherspaceComponent },
+{path: 'events' , component:EventsComponent },
 
 
   //all the paths related to the teacher

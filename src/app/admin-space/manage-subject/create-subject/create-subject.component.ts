@@ -13,7 +13,7 @@ import { CourseService } from 'src/app/services/course.service';
 })
 export class CreateSubjectComponent implements OnInit {
 
-  subject:Course= new Course();
+  course:Course= new Course();
 
   //for the validation
   createSubject= new FormGroup({
@@ -28,13 +28,13 @@ export class CreateSubjectComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //for the validation to get the values from all fields 
+  //for the validation to get the values from all fields
   get NameSub(){return this.createSubject.get('NameSub')}
   get yearS(){return this.createSubject.get('yearS')}
   get teach(){return this.createSubject.get('teach')}
-  
+
   saveSubject(){
-    this.subjectService.createCourse(this.subject).subscribe( data =>{
+    this.subjectService.createCourse(this.course).subscribe( data =>{
       console.log(data);
       this.goToSubjectList();
     },
@@ -44,9 +44,9 @@ export class CreateSubjectComponent implements OnInit {
   goToSubjectList(){
     this.router.navigate(['/manage-subject']);
   }
-  
+
   onSubmit(){
-    console.log(this.subject);
+    console.log(this.course);
     this.saveSubject();
   }
 

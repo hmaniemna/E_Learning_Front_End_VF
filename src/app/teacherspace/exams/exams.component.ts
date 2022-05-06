@@ -49,13 +49,13 @@ export class ExamsComponent implements OnInit {
 
 
 
-deletetest(id: String){
+deletetest(id: number){
     this.examservice.deletetest(id).subscribe(data =>{
      console.log(data);
      this.examservice.getAlltests();
     });
    }
-   downloadtest(id : String){
+   downloadtest(id : number){
      this.examservice.downloadtest(id).subscribe(data =>{
       console.log(data);
      });

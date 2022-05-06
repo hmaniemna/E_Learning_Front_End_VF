@@ -10,7 +10,7 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class LoginStudentComponent implements OnInit {
 
-student:Student = new Student();
+ public student:Student = new Student();
 
   constructor(private router: Router,
     private studentService: StudentService) { }
@@ -30,4 +30,5 @@ student:Student = new Student();
     },
     error => alert("Error, Please retry!"));
   }
+
 }

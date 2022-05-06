@@ -6,4 +6,7 @@ export class Course {
     startDate !: Date;
     endDate !: Date;
     teacher !: Teacher;
+    idteacher!:number ;
+    description!:String ; 
 }
+

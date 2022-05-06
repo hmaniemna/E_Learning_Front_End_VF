@@ -8,6 +8,8 @@ import { Course } from '../classes/course';
   providedIn: 'root'
 })
 export class TeacherService {
+  
+  
 
   private baseUrl="http://localhost:8080/api/v1/teachers"
 
@@ -46,4 +48,5 @@ export class TeacherService {
   //return the list of courses
   getAllcourses(id:number):Observable<Course>{
     return this.httpClient.get<Course>(`${this.baseUrl}/${id}`);}
+
 }

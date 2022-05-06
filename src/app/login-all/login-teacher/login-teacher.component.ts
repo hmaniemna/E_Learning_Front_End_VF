@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Teacher} from "../../classes/teacher";
-import { TeacherService } from 'src/app/services/teacher.service';
+import { Teacher } from '../../classes/teacher';
+import {TeacherService } from 'src/app/services/teacher.service';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-login-teacher',
   templateUrl: './login-teacher.component.html',
@@ -10,26 +9,26 @@ import { Router } from '@angular/router';
 })
 export class LoginTeacherComponent implements OnInit {
 
-  teacher:Teacher=new Teacher();
+  teacher:Teacher = new Teacher;
+  constructor(private teacherservice:TeacherService , private router:Router) {
 
-  constructor(private router: Router,
-    private teacherService:TeacherService) { }
+  }
 
   ngOnInit(): void {
   }
 
   loginTeacher(){
-    console.log(this.teacher.emailId, this.teacher.password);
-    this.teacherService.teacherLogin(this.teacher.emailId, this.teacher.password).subscribe(data=> {
-      alert("Login operation successful!");
-      this.goToTeacherSpace();
+    console.log(this.teacher.emailId,this.teacher.password);
+    this.teacherservice.teacherLogin(this.teacher.emailId,this.teacher.password).subscribe(data=> {
+      alert("Login operation successful!")
+      //to navigate to another page
+      this.gototeacherspace(this.teacher.idT);
+      
     },
-    error => alert("Error, Please retry!"));
-  }
+    error => alert("Error, Please retry!"));  }
 
-
-  goToTeacherSpace(){
-    this.router.navigate(['/teacherspace']);
+  gototeacherspace(id : number){
+  this.router.navigate(["teacherspace",id]);
   }
 
 }

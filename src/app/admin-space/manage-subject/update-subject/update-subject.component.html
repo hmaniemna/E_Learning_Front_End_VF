@@ -44,11 +44,11 @@
                                 </div>
                                 <div class="tab-inn">
                                     <div>
-                                        
+
                                         <form (ngSubmit) = "onSubmit()" [formGroup]="createSubject">
-                                        
-                                        
-                                        
+
+
+
                                             <div class="form-group">
                                                 <label> Title </label>
                                                 <input formControlName="NameSub" type="text" class ="form-control" id = "NameSub"
@@ -65,15 +65,15 @@
                                             <div class="form-group">
                                                 <label> Teacher</label>
                                                 <input formControlName="teacher" type="text" class ="form-control" id = "teacher"
-                                                    [(ngModel)] = "subject.teacher.fullName" name = "teacher">
+                                                    [(ngModel)] = "subject.idteacher" name = "teacher">
                                                 <span *ngIf="teach?.invalid && teach?.touched" class="text-danger">teacher name  is required!</span>
                                             </div>
-                                        
-                                        
+
+
                                             <button class = "btn btn-success" type ="submit">Submit</button>
-                                        
+
                                         </form>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

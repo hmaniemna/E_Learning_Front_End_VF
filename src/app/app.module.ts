@@ -10,6 +10,21 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgWhiteboardModule } from 'ng-whiteboard';
 import { DataService } from './services/data.service';
+import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
+//--------------------------
+//This is the importation in the last project
+
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -74,8 +89,12 @@ import {ClassroomSComponent} from './student-space/classroom-s/classroom-s.compo
 import { SidebarteacherComponent } from './teacherspace/sidebarteacher/sidebarteacher.component';
 import { AddexamComponent } from './teacherspace/exams/addexam/addexam.component';
 import { ExamsComponent } from './teacherspace/exams/exams.component';
-import { ClassroomComponent } from './teacherspace/classroom/classroom.component';
-import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
+import { ClassroomTeacherComponent } from './teacherspace/classroom-teacher/classroom-teacher.component';
+import { ChatComponent } from './chat/chat.component';
+import { EventsComponent } from './events/events.component';
+import { EventComponent } from './event/event.component';
+
+
 
 
 FullCalendarModule.registerPlugins([
@@ -118,7 +137,6 @@ FullCalendarModule.registerPlugins([
     ExamsComponent,
     CreateSubjectComponent,
     UpdateSubjectComponent,
-    ClassroomComponent,
     ManageAdminAccountComponent,
     UpdateAccountComponent,
     ManageEventsComponent,
@@ -136,6 +154,13 @@ FullCalendarModule.registerPlugins([
     TimeLineSComponent,
     ClassroomSComponent,
     TeacherspaceComponent,
+    CreateSubjectComponent,
+    UpdateSubjectComponent,
+    ClassroomTeacherComponent,
+    ChatComponent,
+    EventsComponent,
+    EventComponent
+
   ],
 
   imports: [

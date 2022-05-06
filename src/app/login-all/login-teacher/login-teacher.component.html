@@ -1,5 +1,4 @@
 <body>
-
     <section>
          <div class="ad-log-main">
              <div>
@@ -43,4 +42,49 @@
          </div>
     </section>
  
- </body>
+  <section>
+       <div class="ad-log-main">
+          <div>
+              <ul>
+                 <li class="page-back"><a href="./"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
+                 </li>
+              </ul>
+          </div>
+           <div class="ad-log-in">
+               <div class="ad-log-in-logo">
+                   <a href="index-2.html"><img src="assets/images/logo.png" alt=""></a>
+               </div>
+               <div class="ad-log-in-con">
+           <div class="log-in-pop-center">
+                   <h4>Login As teacher</h4>
+                   <p>Connect to your space!</p>
+                   <form class="s12" (ngSubmit)="loginTeacher()">
+                       <div>
+                           <div class="input-field s12">
+                               <input type="text" data-ng-model="name" [(ngModel)]="teacher.emailId" class="form-control" id="emailId" name="emailId">
+                               <label class="">User Email</label>
+                           </div>
+                       </div>
+                       
+                       <div>
+                           <div class="input-field s12">
+                               <input type="password" [(ngModel)]="teacher.password" class="form-control" id="password" name="password">
+                               <label>Password</label>
+                           </div>
+                       </div>
+
+                       <!--<div class="input-field s4">
+                         <a class="log-in-btn waves-input-wrapper" style="width:150px; height:30px; color: aliceblue;" >adminspace</a>
+                         </div> -->
+                         <div class=" mt-4">
+                          <button type="submit" class="log-in-btn styling_button">Login</button>
+                        </div>
+                       </form>
+                </div>
+                </div>
+            </div>
+        </div>
+   </section>
+</body>
+
+
