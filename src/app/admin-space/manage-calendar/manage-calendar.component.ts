@@ -28,18 +28,19 @@ export class ManageCalendarComponent implements AfterViewInit {
     days: 7,
     startDate: "2022-09-01",
     scale: "Day",
-    onTimeRangeSelected: (args: { start: { toString: () => any; }; end: { toString: () => any; }; resource: any; }) => {
+    onTimeRangeSelected: (args) => {
       DayPilot.Modal.prompt("Text Event:", "").then(modal => {
         this.scheduler.control.clearSelection();
         if (!modal.result) {
           return;
         }
-    
+        console.log(args)
+        
         let params: EventCreateParams = {
           start: args.start.toString(),
           end: args.end.toString(),
           text: modal.result,
-          resource: args.resource
+          TimeIntervalId: args.resource
         };
         console.log(params);
         this.ds.createEvent(params).subscribe(result => {

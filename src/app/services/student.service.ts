@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Group } from '../classes/group';
 import { Student } from '../classes/student';
 
 @Injectable({
@@ -12,9 +13,9 @@ private baseUrl= "http://localhost:8080/api/v1/students"
   constructor(private httpClient: HttpClient) { }
 
   //login to pass the data from the server to the controllers   its not right!!!
-  studentLogin(email:String,password:String):Observable<Object>{
-    console.log(email,password);
-    return this.httpClient.get(`${this.baseUrl}/${email}/${password}`);
+  studentLogin(email:String,password:String):Observable<Student>{
+
+    return this.httpClient.get <Student>(`${this.baseUrl}/${email}/${password}`);
   }
 
  //return the student list by level  ?????????????????????????????
@@ -45,6 +46,15 @@ private baseUrl= "http://localhost:8080/api/v1/students"
     return this.httpClient.get<Student>(`${this.baseUrl}/${idS}`);
   }
  
+}
+ 
 
-
+export interface StudentInterface {
+  idS: number;
+    firstName: String;
+    lastName: String;
+    group: Group;
+    password: String;
+    accessCode: number;
+    emailId: String;
 }

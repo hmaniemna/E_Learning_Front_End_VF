@@ -38,14 +38,14 @@ export interface EventCreateParams {
   start: string;
   end: string;
   text: string;
-  resource: number;
+  TimeIntervalId: number ;
 }
 
 export interface EventMoveParams {
   id: string | number;
   start: string;
   end: string;
-  resource: string | number;
+  TimeIntervalId: number;
 }
 
 export interface EventData {

@@ -120,6 +120,7 @@ export const routes: Routes = [
 
 
       //all the paths related to the student space
+      {path: 'student-space/:id', component: StudentSpaceComponent },
       {path: 'student-space', component: StudentSpaceComponent },
       {path: 'student-profile', component: ProfileSComponent },
       {path: 'student-classroom', component: ClassroomSComponent },

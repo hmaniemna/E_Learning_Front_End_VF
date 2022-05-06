@@ -21,7 +21,7 @@ export class TeacherspaceComponent implements OnInit{
   
 
   constructor(private router: Router , private route: ActivatedRoute,private teacherservice :TeacherService , private courseservice:CourseService) {
-this.getCourses() ;
+    this.getCourses() ;
 
   }
 

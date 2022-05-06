@@ -22,13 +22,9 @@ export class LoginTeacherComponent implements OnInit {
     this.teacherservice.teacherLogin(this.teacher.emailId,this.teacher.password).subscribe(data=> {
       alert("Login operation successful!")
       //to navigate to another page
-      this.gototeacherspace(this.teacher.idT);
+      this.router.navigate(["/teacherspace/"+this.teacher.idT]);
       
     },
     error => alert("Error, Please retry!"));  }
-
-  gototeacherspace(id : number){
-  this.router.navigate(["teacherspace",id]);
-  }
 
 }
