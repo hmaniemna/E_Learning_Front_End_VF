@@ -16,7 +16,7 @@ export class DataService {
   }
 
   getResources(): Observable<any[]> {
-    return this.httpClient.get("http://localhost:8080/api/v1/Resources") as Observable<any>;
+    return this.httpClient.get("http://localhost:8080/api/v1/TimeIntervals") as Observable<any>;
   }
 
   createEvent(data: EventCreateParams): Observable<EventData> {

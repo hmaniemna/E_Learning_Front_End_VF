@@ -51,7 +51,6 @@ import { ManageCalendarComponent } from './admin-space/manage-calendar/manage-ca
 import { ManageStudentComponent } from './admin-space/manage-student/manage-student.component';
 import { SectionsComponent } from './home/sections/sections.component';
 import { SideBarComponent } from './admin-space/side-bar/side-bar.component';
-import { CalendarComponent } from './admin-space/manage-calendar/calendar/calendar.component';
 import { UpdateStudentComponent } from './admin-space/manage-student/update-student/update-student.component';
 import { StudentDetailsComponent } from './admin-space/manage-student/student-details/student-details.component';
 import { CreateStudentComponent } from './admin-space/manage-student/create-student/create-student.component';
@@ -71,7 +70,7 @@ import { EventDetailsComponent } from './admin-space/manage-events/event-details
 import { UpdateEventComponent } from './admin-space/manage-events/update-event/update-event.component';
 import { CreateEventComponent } from './admin-space/manage-events/create-event/create-event.component';
 import { ManageNotesComponent } from './admin-space/manage-notes/manage-notes.component';
-import { SchedulerCalComponent } from './admin-space/scheduler/scheduler-cal/scheduler-cal.component';
+
 
 //Student Space Component
 import { StudentSpaceComponent } from './student-space/student-space.component';
@@ -105,7 +104,6 @@ FullCalendarModule.registerPlugins([
 
 @NgModule({
   declarations: [
-    SchedulerCalComponent,
     AppComponent,
     HomeComponent,
     AdminSpaceComponent,
@@ -120,7 +118,6 @@ FullCalendarModule.registerPlugins([
     HeaderHComponent,
     SectionsComponent,
     SideBarComponent,
-    CalendarComponent,
     UpdateStudentComponent,
     StudentDetailsComponent,
     CreateStudentComponent,
