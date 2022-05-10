@@ -4,6 +4,7 @@ import { CalendarOptions } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
+
 @Component({
   selector: 'app-calendar-s',
   templateUrl: './calendar-s.component.html',

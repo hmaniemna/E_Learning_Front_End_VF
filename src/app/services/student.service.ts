@@ -48,13 +48,3 @@ private baseUrl= "http://localhost:8080/api/v1/students"
  
 }
  
-
-export interface StudentInterface {
-  idS: number;
-    firstName: String;
-    lastName: String;
-    group: Group;
-    password: String;
-    accessCode: number;
-    emailId: String;
-}

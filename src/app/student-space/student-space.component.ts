@@ -16,7 +16,8 @@ export class StudentSpaceComponent implements OnInit {
   courses!: Course[];
 
   constructor(private router: Router , private route: ActivatedRoute,private studentservice :StudentService , private courseservice:CourseService) {
-
+  
+    
    }
   
   ngOnInit(): void {
@@ -26,7 +27,6 @@ export class StudentSpaceComponent implements OnInit {
     this.student = data;
     console.log(this.student);
     this.getStudentCourses();
-    
   });
    
   }

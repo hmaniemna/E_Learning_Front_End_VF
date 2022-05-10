@@ -49,7 +49,7 @@ getAlltests(): Observable<any> {
   return this.httpClient.delete(`${this.baseUrl}/deletetest/${idS}`);
 }
 
-gettestById(idS:number):Observable<Exam>{
+getExamById(idS:number):Observable<Exam>{
   return this.httpClient.get<Exam>(`${this.baseUrl}/files/${idS}`);
 
 }

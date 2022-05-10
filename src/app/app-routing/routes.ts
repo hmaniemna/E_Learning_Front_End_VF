@@ -41,10 +41,12 @@ import { CalendarSComponent } from '../student-space/calendar-s/calendar-s.compo
 import { ClassroomSComponent } from '../student-space/classroom-s/classroom-s.component';
 import { ProfileSComponent } from '../student-space/profile-s/profile-s.component';
 import { EventsSComponent } from '../student-space/events-s/events-s.component';
-import { TimeLineSComponent } from '../student-space/time-line-s/time-line-s.component';
 import { TestsSComponent } from '../student-space/tests-s/tests-s.component';
 import {ClassroomTeacherComponent}from '../teacherspace/classroom-teacher/classroom-teacher.component';
 import { ChatComponent } from '../chat/chat.component';
+import { ClassroomComponent } from '../student-space/classroom-s/classroom/classroom.component';
+import { ManageProfileComponent } from '../student-space/profile-s/manage-profile/manage-profile.component';
+
 
 
 export const routes: Routes = [
@@ -120,13 +122,13 @@ export const routes: Routes = [
 
 
       //all the paths related to the student space
-      {path: 'student-space/:id', component: StudentSpaceComponent },
-      {path: 'student-space', component: StudentSpaceComponent },
-      {path: 'student-profile', component: ProfileSComponent },
-      {path: 'student-classroom', component: ClassroomSComponent },
-      {path: 'student-calendar', component: CalendarSComponent },
-      {path: 'student-timeLine', component: TimeLineSComponent },
-      {path: 'student-events', component: EventsSComponent},
-      {path: 'student-tests', component: TestsSComponent},
-      {path: 'student-articles', component: ArticlesSComponent },
+      {path: 'student-space/:id', component: StudentSpaceComponent ,pathMatch: 'full'},
+      {path: 'student-profile/:id', component: ProfileSComponent },
+      {path: 'student-manage-profile/:id', component:  ManageProfileComponent },
+      {path: 'student-classroomS/:id', component: ClassroomSComponent },
+      {path: 'student-classroom/:id', component: ClassroomComponent },
+      {path: 'student-calendar/:id', component: CalendarSComponent },
+      {path: 'student-events/:id', component: EventsSComponent},
+      {path: 'student-tests/:id', component: TestsSComponent},
+      {path: 'student-articles/:id', component: ArticlesSComponent },
 ];

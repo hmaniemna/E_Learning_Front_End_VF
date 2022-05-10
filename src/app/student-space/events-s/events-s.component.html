@@ -10,10 +10,7 @@
                 </a>
             </div>
             <!--== MY ACCCOUNT ==-->
-            <div  class="text">
-                <!-- Dropdown Trigger -->
-                <a href='/student-profile' data-activates='top-menu' ><img src="assets/images/user/6.png" alt="" /></a>
-            </div>
+        
         </div>
     </div>
 
@@ -21,51 +18,7 @@
         <div>
             <div class="sb2-1">
                 
-                    <!--== USER INFO ==-->
-                    <div class="sb2-12">
-                       <ul>
-                           <li><img src="assets/images/placeholder.jpg" alt="">
-                           </li>
-                           <li>
-                               <h5 class="color"> Emna Hmani <span> Manouba,Tunis </span></h5>
-                           </li>
-                           <li></li>
-                       </ul>
-                   </div>
-                   <!--== LEFT MENU ==-->
-                   <div class="sb2-13">
-                       <ul class="collapsible" data-collapsible="accordion">
-                           <li><a  href="" routerLink="/student-space" routerLinkActive="active" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i>My dashboard</a>
-                           </li>
-                           <li><a href="" routerLink="/student-classroom" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Classroom</a>
-                           </li>
-                           <li><a href="" routerLink="/student-profile" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Profile</a>
-                           </li>
-                           <li><a href="" routerLink="/student-calendar" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Calendar</a>
-                           </li>
-                           <li><a href="" routerLink="/student-timeLine" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Time Line</a>
-                           </li>
-                           <li><a href="" routerLink="/student-tests" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Tests</a>
-                           </li>
-                           <li><a href="" routerLink="/student-events" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Events</a>
-                           </li>
-                           <li><a href="" routerLink="/student-articles" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Articles</a>
-                           </li>
-                           <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> All Courses</a>
-                               <div class="collapsible-body left-sub-menu">
-                                   <ul>
-                                       <li><a href="admin-all-courses.html">All Course</a>
-                                       </li>
-                                       <li><a href="admin-add-courses.html">Add New Course</a>
-                                       </li>
-                                       <li><a href="admin-trash-courses.html">Trash Course</a>
-                                       </li>
-                                   </ul>
-                               </div>
-                           </li>
-                   
-                       </ul>
-                   </div>
+                <app-side-bar-s></app-side-bar-s>
                 
                           
                 
@@ -78,9 +31,9 @@
                     <ul>
                         <li><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                         </li>
-                        <li class="active-bre"><a href="" routerLink="/student-space" routerLinkActive="active"> Dashboard</a>
-                        </li>
-                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+                       <!-- <li class="active-bre"><a href="" [routerLink]="['/student-space/', this.student.idS]" routerLinkActive="active"> Dashboard</a>
+                        </li>-->
+                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Log Out</a>
                         </li>
                     </ul>
                 </div>
@@ -98,124 +51,30 @@
                     <div class="ed-about-tit">
                         <div class="con-title">
                             <h2>College <span> Events</span></h2>
-                            <p>Fusce id sem at ligula laoreet hendrerit venenatis sed purus. Ut pellentesque maximus lacus, nec pharetra augue.</p>
+                            
                         </div>
                         <div>
                             <div class="ho-event pg-eve-main">
-                                <ul>
+                                <ul  *ngFor = "let event of events">
                                     <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>07</span><span>jan,2018</span>
+                                        <div class="ho-ev-date pg-eve-date"><span>{{event.dayEvent}}</span><span>{{event.monthEvent}},{{event.yearEvent}}</span>
                                         </div>
                                         <div class="ho-ev-link pg-eve-desc">
                                             <a href="event-register.html">
-                                                <h4>Latinoo College Expo 2018 - DONATION</h4>
+                                                <h4>{{event.nameEvent}}</h4>
                                             </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
+                                            <p>{{event.description}}</p>
+                                            <span>{{event.duration}} days</span>
                                         </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
+                                        <!--<div class="pg-eve-reg">
+                                            <a href="" [routerLink]="['/student-event/', this.event.idEvent]" routerLinkActive="active">Read more</a>
+                                        </div>-->
                                     </li>
-                                    <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>12</span><span>feb,2018</span>
-                                        </div>
-                                        <div class="ho-ev-link pg-eve-desc">
-                                            <a href="event-register.html">
-                                                <h4>Training at Team Fabio Clemente</h4>
-                                            </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
-                                        </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>26</span><span>apr,2018</span>
-                                        </div>
-                                        <div class="ho-ev-link pg-eve-desc">
-                                            <a href="event-register.html">
-                                                <h4>Weekly Breakdance Practice</h4>
-                                            </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
-                                        </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>18</span><span>sep,2018</span>
-                                        </div>
-                                        <div class="ho-ev-link pg-eve-desc">
-                                            <a href="event-register.html">
-                                                <h4>Admissions Information Session and Tour</h4>
-                                            </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
-                                        </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>07</span><span>nov,2018</span>
-                                        </div>
-                                        <div class="ho-ev-link pg-eve-desc">
-                                            <a href="event-register.html">
-                                                <h4>CUNY Assessment Test Workshop</h4>
-                                            </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
-                                        </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>18</span><span>sep,2018</span>
-                                        </div>
-                                        <div class="ho-ev-link pg-eve-desc">
-                                            <a href="event-register.html">
-                                                <h4>Fire & ice launch party</h4>
-                                            </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
-                                        </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="ho-ev-date pg-eve-date"><span>07</span><span>nov,2018</span>
-                                        </div>
-                                        <div class="ho-ev-link pg-eve-desc">
-                                            <a href="event-register.html">
-                                                <h4>Educate to Empower NYE Party</h4>
-                                            </a>
-                                            <p>Nulla at velit convallis, venenatis lacus quis, efficitur lectus.</p>
-                                            <span>9:15 am – 5:00 pm</span>
-                                        </div>
-                                        <div class="pg-eve-reg">
-                                            <a href="event-register.html">Register</a><a href="event-details.html">Read more</a>
-                                        </div>
-                                    </li>
+                                  
                                 </ul>
                             </div>
                         </div>
-                        <div class="pg-pagina">
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#!"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-                                <li class="active"><a href="#!">1</a></li>
-                                <li class="waves-effect"><a href="#!">2</a></li>
-                                <li class="waves-effect"><a href="#!">3</a></li>
-                                <li class="waves-effect"><a href="#!">4</a></li>
-                                <li class="waves-effect"><a href="#!">5</a></li>
-                                <li class="waves-effect"><a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                            </ul>
-
-                        </div>
+    
                     </div>
                 </div>
             </div>

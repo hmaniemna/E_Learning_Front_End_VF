@@ -31,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
 import {DayPilotModule} from "daypilot-pro-angular";
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 // component imports
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -75,11 +76,9 @@ import { ManageNotesComponent } from './admin-space/manage-notes/manage-notes.co
 //Student Space Component
 import { StudentSpaceComponent } from './student-space/student-space.component';
 import {SideBarSComponent} from './student-space/side-bar-s/side-bar-s.component';
-import {DashboardSComponent} from './student-space/dashboard-s/dashboard-s.component';
 import {ProfileSComponent} from './student-space/profile-s/profile-s.component';
 import {EventsSComponent} from './student-space/events-s/events-s.component';
 import {TestsSComponent}from './student-space/tests-s/tests-s.component';
-import {TimeLineSComponent} from './student-space/time-line-s/time-line-s.component';
 import { CalendarSComponent} from './student-space/calendar-s/calendar-s.component';
 import {ArticlesSComponent} from './student-space/articles-s/articles-s.component';
 import {ClassroomSComponent} from './student-space/classroom-s/classroom-s.component';
@@ -92,6 +91,8 @@ import { ClassroomTeacherComponent } from './teacherspace/classroom-teacher/clas
 import { ChatComponent } from './chat/chat.component';
 import { EventsComponent } from './events/events.component';
 import { EventComponent } from './event/event.component';
+import { ClassroomComponent } from './student-space/classroom-s/classroom/classroom.component';
+import { ManageProfileComponent } from './student-space/profile-s/manage-profile/manage-profile.component';
 
 
 
@@ -142,13 +143,11 @@ FullCalendarModule.registerPlugins([
     CreateEventComponent,
     ManageNotesComponent,
     SideBarSComponent,
-    DashboardSComponent,
     ProfileSComponent,
     TestsSComponent,
     CalendarSComponent,
     ArticlesSComponent,
     EventsSComponent,
-    TimeLineSComponent,
     ClassroomSComponent,
     TeacherspaceComponent,
     CreateSubjectComponent,
@@ -156,7 +155,9 @@ FullCalendarModule.registerPlugins([
     ClassroomTeacherComponent,
     ChatComponent,
     EventsComponent,
-    EventComponent
+    EventComponent,
+    ClassroomComponent,
+    ManageProfileComponent
 
   ],
 
@@ -176,6 +177,7 @@ FullCalendarModule.registerPlugins([
     MatCardModule,
     NgWhiteboardModule,
     ScheduleModule,
+    PdfViewerModule,
 ],
   providers: [DataService
 ],

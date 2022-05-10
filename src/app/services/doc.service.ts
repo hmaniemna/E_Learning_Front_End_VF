@@ -30,8 +30,12 @@ export class DocService {
   getAlldoc(): Observable<any> {
     return this.httpClient.get(`${this.baseUrl}/doc`);
   }
-  downloaddoc(idS:number): Observable<any> {
-    return this.httpClient.get(`${this.baseUrl}/downloadDoc/${idS}`);
+
+  getDocsByCourseId(id : number):Observable<any>{
+    return this.httpClient.get(`${this.baseUrl}/doc/courses/${id}`);
+  }
+   downloaddoc(id:number):any{
+    return this.httpClient.get(`${this.baseUrl}/downloadDoc/${id}`,{observe:'response',responseType:'blob'});
   }
 
 }

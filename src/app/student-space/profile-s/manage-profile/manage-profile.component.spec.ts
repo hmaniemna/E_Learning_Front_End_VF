@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardSComponent } from './dashboard-s.component';
+import { ManageProfileComponent } from './manage-profile.component';
 
-describe('DashboardSComponent', () => {
-  let component: DashboardSComponent;
-  let fixture: ComponentFixture<DashboardSComponent>;
+describe('ManageProfileComponent', () => {
+  let component: ManageProfileComponent;
+  let fixture: ComponentFixture<ManageProfileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardSComponent ]
+      declarations: [ ManageProfileComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardSComponent);
+    fixture = TestBed.createComponent(ManageProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

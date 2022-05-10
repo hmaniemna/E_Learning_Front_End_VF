@@ -10,61 +10,14 @@
                 </a>
             </div>
             <!--== MY ACCCOUNT ==-->
-            <div  class="text">
-                <!-- Dropdown Trigger -->
-                <a href='/student-profile' data-activates='top-menu' ><img src="assets/images/user/6.png" alt="" /></a>
-            </div>
+        
         </div>
     </div>
 
     <div class="container-fluid sb2">
         <div>
             <div class="sb2-1">
-                    <!--== USER INFO ==-->
-                    <div class="sb2-12">
-                       <ul>
-                           <li><img src="assets/images/placeholder.jpg" alt="">
-                           </li>
-                           <li>
-                               <h5 class="color"> Emna Hmani <span> Manouba,Tunis </span></h5>
-                           </li>
-                           <li></li>
-                       </ul>
-                   </div>
-                   <!--== LEFT MENU ==-->
-                   <div class="sb2-13">
-                       <ul class="collapsible" data-collapsible="accordion">
-                           <li><a  href="" routerLink="/student-space" routerLinkActive="active" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i>My dashboard</a>
-                           </li>
-                           <li><a href="" routerLink="/student-classroom" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Classroom</a>
-                           </li>
-                           <li><a href="" routerLink="/student-profile" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Profile</a>
-                           </li>
-                           <li><a href="" routerLink="/student-calendar" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Calendar</a>
-                           </li>
-                           <li><a href="" routerLink="/student-timeLine" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Time Line</a>
-                           </li>
-                           <li><a href="" routerLink="/student-tests" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Tests</a>
-                           </li>
-                           <li><a href="" routerLink="/student-events" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Events</a>
-                           </li>
-                           <li><a href="" routerLink="/student-articles" routerLinkActive="active" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> Articles</a>
-                           </li>
-                           <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> All Courses</a>
-                               <div class="collapsible-body left-sub-menu">
-                                   <ul>
-                                       <li><a href="admin-all-courses.html">All Course</a>
-                                       </li>
-                                       <li><a href="admin-add-courses.html">Add New Course</a>
-                                       </li>
-                                       <li><a href="admin-trash-courses.html">Trash Course</a>
-                                       </li>
-                                   </ul>
-                               </div>
-                           </li>
-                   
-                       </ul>
-                   </div>
+                <app-side-bar-s></app-side-bar-s>
                 
                 
                           
@@ -78,9 +31,9 @@
                     <ul>
                         <li><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                         </li>
-                        <li class="active-bre"><a href="" routerLink="/student-space" routerLinkActive="active"> Dashboard</a>
+                        <li class="active-bre"><a href="" [routerLink]="['/student-space/', this.student.idS]" routerLinkActive="active"> Dashboard</a>
                         </li>
-                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Log Out</a>
                         </li>
                     </ul>
                 </div>
@@ -95,17 +48,15 @@
         <div class="container pg-inn">
             <div class="col-md-3">
                 <div class="pro-user">
-                    <img src="assets/images/user.jpg" alt="user">
+                    <img src="assets/images/emna.jpg" alt="user">
                 </div>
                 <div class="pro-user-bio">
                     <ul>
                         <li>
-                            <h4>Emily Jessica</h4>
+                            <h4>{{this.student.firstName}} {{this.student.lastName}}</h4>
                         </li>
-                        <li>Student Id: ST17241</li>
-                        <li><a href="#!"><i class="fa fa-facebook"></i> Facebook: my sample</a></li>
-                        <li><a href="#!"><i class="fa fa-google-plus"></i> Google: my sample</a></li>
-                        <li><a href="#!"><i class="fa fa-twitter"></i> Twitter: my sample</a></li>
+                        <li>My Access Code: {{this.student.accessCode}}</li>
+                        <li><a href="#!"><i class="fa fa-google-plus"></i>My Google: {{this.student.email}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -114,51 +65,39 @@
 
                     <div class="udb-sec udb-prof">
                         <h4><img src="assets/images/icon/db1.png" alt="" /> My Profile</h4>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
-                            to using 'Content here, content here', making it look like readable English.</p>
                         <div class="sdb-tabl-com sdb-pro-table">
                             <table class="responsive-table bordered">
                                 <tbody>
                                     <tr>
-                                        <td>Student Name</td>
+                                        <td>My Name</td>
                                         <td>:</td>
-                                        <td>Sam Anderson</td>
+                                        <td>{{this.student.firstName}} {{this.student.lastName}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Student Id</td>
+                                        <td>My Access Code</td>
                                         <td>:</td>
-                                        <td>ST17241</td>
+                                        <td>{{this.student.accessCode}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Eamil</td>
+                                        <td>My Eamil</td>
                                         <td>:</td>
-                                        <td>sam_anderson@gmail.com</td>
+                                        <td>{{this.student.email}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Phone</td>
+                                        <td>My Password</td>
                                         <td>:</td>
-                                        <td>+01 4561 3214</td>
+                                        <td>{{this.student.password}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Date of birth</td>
+                                        <td>My Goupe</td>
                                         <td>:</td>
-                                        <td>03 Jun 1990</td>
+                                        <td>{{this.student.group.nameG}}{{this.student.group.levelG}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Address</td>
-                                        <td>:</td>
-                                        <td>8800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Status</td>
-                                        <td>:</td>
-                                        <td><span class="db-done">Active</span> </td>
-                                    </tr>
+                             
                                 </tbody>
                             </table>
                             <div class="sdb-bot-edit">
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                                <a href="#" class="waves-effect waves-light btn-large sdb-btn sdb-btn-edit"><i class="fa fa-pencil"></i> Edit my profile</a>
+                                <a href="" [routerLink]="['/student-manage-profile/', this.student.idS]" routerLinkActive="active"  class="waves-effect waves-light btn-large sdb-btn sdb-btn-edit"><i class="fa fa-pencil"></i> Edit my profile</a>
                             </div>
                         </div>
                     </div>
