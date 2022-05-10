@@ -42,7 +42,7 @@ export class TeacherService {
   getAllcourses(id:number):Observable<Course>{
     return this.httpClient.get<Course>(`${this.baseUrl}/${id}`);}
 
-   teacherLogin(email:String , password: String):Observable<Object>{
+   teacherLogin(email:String , password: String):Observable<Teacher>{
       console.log(email , password);
       return this.httpClient.get<Teacher>(`${this.baseUrl}/${email}/${password}`);
 

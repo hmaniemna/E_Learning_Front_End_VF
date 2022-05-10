@@ -22,6 +22,7 @@ public teacher:Teacher = new Teacher();
     console.log(this.teacher);
 
       this.teacherservice.teacherLogin(this.teacher.emailId,this.teacher.password).subscribe(data => {
+        this.teacher= data;
         console.log(this.teacher);
 
 
