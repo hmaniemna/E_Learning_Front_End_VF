@@ -127,9 +127,9 @@
                         <div class="box-inn-sp">
                             <div class="inn-title">
                                 <h4>Student Details</h4>
-                                <p>All about students like name, phone, email, country, city and more</p>
+                                <p>All about students like name, phone, email and more</p>
                             </div>
-                            <div class="tab-inn"  *ngFor = "let teacher of teachers">
+                            <div class="tab-inn"  *ngFor = "let student of students">
                                 <div class="table-responsive table-desi">
                                     <table class="table table-hover" >
                                         <thead>
@@ -139,7 +139,7 @@
                                                 <th>Last Name</th>
                                                 <th>Email</th>
 
-                                                <th>Level</th>
+
 
 
 
@@ -155,7 +155,7 @@
                                                 <td>{{student.firstName}}</td>
                                                 <td>{{student.lastName}}</td>
                                                 <td>{{student.emailId}}</td>
-                                                <td>{{student.level}}</td>
+                                               
 
 
 

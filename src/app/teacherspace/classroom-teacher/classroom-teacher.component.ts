@@ -7,6 +7,12 @@ import { Observable } from 'rxjs';
 import { CourseService } from 'src/app/services/course.service';
 import {EventService } from 'src/app/services/event.service';
 import { Event } from 'src/app/classes/event';
+import { TodoService } from 'src/app/services/todo.service';
+import { Todo } from 'src/app/classes/todo';
+import { NgForm } from '@angular/forms';
+import { HttpClient } from "@angular/common/http";
+import { DialogsComponent } from 'src/app/dialogs/dialogs.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-classroom-teacher',
@@ -15,7 +21,8 @@ import { Event } from 'src/app/classes/event';
 })
 export class ClassroomTeacherComponent implements OnInit {
 
-
+  todo:Todo = new Todo();
+  todos: Todo[] = [];
 
   fileInfos?: Observable<any>;
   selectedFiles?: FileList;
@@ -25,8 +32,9 @@ progress = 0;
 message = '';
 course = new Course();
 events!:Event[];
-  constructor(private courseservice : CourseService , private eventService:EventService ,  private router: Router , private route: ActivatedRoute , private docservice : DocService) {
+  constructor(private todoService: TodoService,private todoDialogRef: MatDialog,private courseservice : CourseService , private eventService:EventService ,  private router: Router , private route: ActivatedRoute , private docservice : DocService,private http: HttpClient) {
     this.fileInfos = this.docservice.getAlldoc();
+    this.getTodos();
     this.getEvents();}
 
 selectFile(event: any): void {
@@ -40,6 +48,63 @@ selectFile(event: any): void {
       this.course=data;
     })
   }
+  gotostudentlist(id : number){
+    this.router.navigate(["liststudents" , id])
+  }
+  getTodos(): void {
+    this.todoService.getTodos().subscribe(data => {
+      this.todos=data;
+    })
+  }
+  deleteTodo(id: number){
+    this.todoService.deleteTodo(id).subscribe(data =>{
+     console.log(data);
+     this.getTodos();
+    });
+   }
+   onNewTodoClick(): void {
+    let dialogRef = this.todoDialogRef.open(DialogsComponent, {
+      data: {
+        title: 'Create new Todo'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      if (result) {
+        if (result.title) {
+          console.log("saving new todo");
+          this.saveNewTodo(result);
+        }
+      }
+    });
+  }
+
+  updateTodo(todo: Todo): void {
+
+   this.todoService.updateTodo(todo).subscribe( data =>{
+    console.log(data);
+    this.getTodos();
+   },
+  error => console.log(error));
+
+  }
+saveNewTodo(todo:Todo){
+  this.todoService.createTodo(todo).subscribe( data =>{
+    console.log(data);
+    this.getTodos();
+  },
+  error => console.log(error));
+}
+getCompletedTodos(): Todo[] {
+  return this.todos.filter(todo => todo.completed);
+}
+
+todoCompleted(index: number, isComplete: boolean): void {
+  let todo = this.todos[index];
+  todo.completed = isComplete;
+  this.updateTodo(todo);
+}
+
   meetSupport(){
     location.href = "https://accounts.google.com/AccountChooser/signinchooser?continue=https://g.co/meet/Course";
  }

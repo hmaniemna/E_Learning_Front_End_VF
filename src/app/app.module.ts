@@ -10,6 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { TeacherspaceComponent } from './teacherspace/teacherspace.component';
+import {
+MatCheckboxModule} from "@angular/material/checkbox";
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatExpansionModule}from '@angular/material/expansion';
 //--------------------------
 //This is the importation in the last project
 
@@ -80,6 +89,8 @@ import { ExamsComponent } from './teacherspace/exams/exams.component';
 import { ClassroomTeacherComponent } from './teacherspace/classroom-teacher/classroom-teacher.component';
 import { ChatComponent } from './chat/chat.component';
 import { EventsComponent } from './events/events.component';
+import { TodoComponent } from './todo/todo.component';
+import { DialogsComponent } from './dialogs/dialogs.component';
 
 
 
@@ -120,7 +131,7 @@ FullCalendarModule.registerPlugins([
     CreateTeacherComponent,
     TeacherDetailsComponent,
     LoginTeacherComponent,
-    
+
     AddexamComponent,
     ExamsComponent,
 TeacherspaceComponent,
@@ -135,6 +146,8 @@ TeacherspaceComponent,
     ClassroomTeacherComponent,
       ChatComponent,
       EventsComponent,
+      TodoComponent,
+      DialogsComponent,
 
   ],
 
@@ -151,6 +164,13 @@ TeacherspaceComponent,
 
     MatSnackBarModule,
     Ng2SearchPipeModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatInputModule
 
     //OLD CODE MABY WILL BE NEEDED
 

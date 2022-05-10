@@ -43,6 +43,7 @@
                     </div>
 
                     <div class="cor-side-com">
+                      <div class="col s12">
                         <div class="">
                             <div class="de-left-tit">
                                 <h4>Upcoming Event</h4>
@@ -57,13 +58,14 @@
                                       <div class="ho-ev-link pg-eve-desc">
                                           <a href="event-register.html">
                                               <h2>{{event.nameEvent}}</h2>
-                                                 
+                                              <span>{{event.duration}}</span>
+
 
                                           </a>
                                           <a href="event-register.html">
                                             <h4>{{event.description}}</h4>
-                                            <h2>{{event.link}}</h2>
-                                               
+                                            <h4>{{event.link}}</h4>
+
 
                                         </a>
                                       </div>
@@ -81,8 +83,73 @@
 
                     </div>
                 </div>
+                </div>
+
+                <!--to do list-->
+                <div class="col-md-3">
+                  <div class="cor-side-com">
+
+                    <div class="ho-st-login">
+                      <div class="col s12">
+
+                            <button mat-button color="primary" (click)="onNewTodoClick()" class="create-button">
+                              <mat-icon>library_add</mat-icon>
+                              New Todo
+                            </button>
+                            <div class="todos-panel">
+                              <!-- Uncompleted Todos -->
+                              <mat-accordion>
+                                <mat-expansion-panel *ngFor="let todo of todos; index as i">
+                                  <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                      <mat-icon class="uncomplete" *ngIf="!todo.completed">close</mat-icon>
+                                      <mat-icon class="complete" *ngIf="todo.completed">check</mat-icon>
+                                      <span><strong>{{todo.createts | date: 'medium' }}</strong></span>
+                                    </mat-panel-title>
+                                    <mat-panel-description>{{todo.title}}</mat-panel-description>
+                                  </mat-expansion-panel-header>
+                                  <p>{{todo.description}}</p>
+                                  <mat-action-row>
+                                    <button mat-button color="primary" (click)="todoCompleted(i,!todo.completed)" *ngIf="!todo.completed">
+                                      <mat-icon>check</mat-icon>
+                                      Complete
+                                    </button>
+                                    <button mat-button color="primary" (click)="todoCompleted( i,!todo.completed)" *ngIf="todo.completed">
+                                      <mat-icon>close</mat-icon>
+                                      Uncomplete
+                                    </button>
+                                    <button mat-button color="secondary" (click)="deleteTodo(todo.id)">
+                                      <mat-icon>delete</mat-icon>
+                                      Delete
+                                    </button>
+                                  </mat-action-row>
+                                </mat-expansion-panel>
+                              </mat-accordion>
+                            </div>
+                          </div>
+                    </div>
+
+</div>
+</div>
+
+
+                </div>
+                  <!--end to do-->
+
+
+                  <div class="cor-p5">
+                    <h3>Course Syllabus</h3>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home"  routerLink="/addexam" routerLinkActive="active">
+                        <img src="assets/images/icon/cor4.png" alt=""> <span>add Test</span></a>
+                        </li>
+                        <li><a data-toggle="tab" href="#menu1"><img src="assets/images/icon/cor3.png" alt=""><span>Add Quiz</span></a></li>
+                        <li><a data-toggle="tab" href="#menu2" (click)="gotostudentlist(course.idteacher)"><i class="fa fa-users" aria-hidden="true"></i><span>Student Profile</span></a></li>
+                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Board</span></a></li>
+                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-commenting-o" aria-hidden="true"></i> <span>Forum</span></a></li>
+                      </ul>
                 <div class="col-md-6">
-                    
+
                     <div class="cor-con-mid">
                         <div class="cor-p1">
 
@@ -97,9 +164,13 @@
 
                         <div class="cor-p4">
      <div class="de-left-tit">
+
          <button class="btn btn-info" (click)="meetSupport()"> Link meet </button>
-     </div>
-<div>  <a routerLink="/addexam" routerLinkActive="active" class="btn btn-success" >Add Test</a></div>
+         </div>
+
+
+
+
 
                             <h3>courses table:</h3>
 
@@ -124,7 +195,7 @@
                     </div>
                     </div>
                     </div>
-                    
+
                 </div>
             </div>
 

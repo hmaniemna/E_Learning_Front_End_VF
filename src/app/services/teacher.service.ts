@@ -8,8 +8,8 @@ import { Course } from '../classes/course';
   providedIn: 'root'
 })
 export class TeacherService {
-  
-  
+
+
 
   private baseUrl="http://localhost:8080/api/v1/teachers"
   constructor(private httpClient:HttpClient) { }
@@ -44,7 +44,7 @@ export class TeacherService {
 
    teacherLogin(email:String , password: String):Observable<Object>{
       console.log(email , password);
-      return this.httpClient.get(`${this.baseUrl}/${email}/${password}`);
+      return this.httpClient.get<Teacher>(`${this.baseUrl}/${email}/${password}`);
 
     }
 }

@@ -18,7 +18,7 @@ export class TeacherspaceComponent implements OnInit{
 
   teacher = new Teacher();
   courses!: Course[];
-  
+
 
   constructor(private router: Router , private route: ActivatedRoute,private teacherservice :TeacherService , private courseservice:CourseService) {
 this.getCourses() ;
@@ -44,23 +44,14 @@ getCourses(){
 }
 
 
-  GoToclassroom($myParam: string = ''): void {
-    const navigationDetails: string[] = ['/classroom-teacher'];
-    if($myParam.length) {
-      navigationDetails.push($myParam);
-    }
-    this.router.navigate(navigationDetails);
-  }
+ 
   gotoclassroom(idcourse:number){
     this.router.navigate(["classroom-teacher",idcourse]);
   }
-  GoToSudents($myParam: string = ''): void {
-    const navigationDetails: string[] = ['/liststudents'];
-    if($myParam.length) {
-      navigationDetails.push($myParam);
-    }
-    this.router.navigate(navigationDetails);
+  gotostudentlist(id : number){
+    this.router.navigate(["liststudents" , id])
   }
+
   GoTocalendrier($myParam: string = ''): void {
     const navigationDetails: string[] = ['/calendrier'];
     if($myParam.length) {

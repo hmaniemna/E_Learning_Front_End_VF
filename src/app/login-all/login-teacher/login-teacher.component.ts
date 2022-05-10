@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginTeacherComponent implements OnInit {
 
-  teacher:Teacher = new Teacher;
+public teacher:Teacher = new Teacher();
   constructor(private teacherservice:TeacherService , private router:Router) {
 
   }
@@ -19,16 +19,19 @@ export class LoginTeacherComponent implements OnInit {
 
   loginteacher(){
     console.log(this.teacher.emailId,this.teacher.password);
-    this.teacherservice.teacherLogin(this.teacher.emailId,this.teacher.password).subscribe(data=> {
+    console.log(this.teacher);
+
+      this.teacherservice.teacherLogin(this.teacher.emailId,this.teacher.password).subscribe(data => {
+        console.log(this.teacher);
+
+
       alert("Login operation successful!")
-      //to navigate to another page
-      this.gototeacherspace(this.teacher.idT);
+      //to navigate to another
+      this.router.navigate(["/teacherspace/"+this.teacher.idT]);
+
 
     },
     error => alert("Error, Please retry!"));  }
 
-  gototeacherspace(id : number){
-  this.router.navigate(["/teacherspace/"+id]);
-  }
 
 }

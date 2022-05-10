@@ -7,7 +7,7 @@ import { Student } from '../classes/student';
   providedIn: 'root'
 })
 export class StudentService {
-private baseUrl= "http://localhost:8080/api/v1/students"
+private baseUrl= "http://localhost:8080/api/v1/"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,31 +17,33 @@ private baseUrl= "http://localhost:8080/api/v1/students"
     return this.httpClient.post(`${this.baseUrl}`,student);
   }
 
- //return the student list by level  ?????????????????????????????
-
+//return students by teacher id
+getstudentbyteacher(id : number):Observable<Student[]>{
+  return this.httpClient.get<Student[]>(`${this.baseUrl}/studentlist/${id}`);
+}
 
   //return the student list
   getStudentList():Observable<Student[]>{
-    return this.httpClient.get<Student[]>(`${this.baseUrl}`);
+    return this.httpClient.get<Student[]>(`${this.baseUrl}/students`);
   }
 
   //to create a student
   createStudent(student:Student):Observable<object>{
-    return this.httpClient.post(`${this.baseUrl}`,student);
+    return this.httpClient.post(`${this.baseUrl}/students`,student);
   }
 
   //to add the updated student to the list
   updateStudent(idS:number, student: Student):Observable<Object>{
-    return this.httpClient.put(`${this.baseUrl}/${idS}`,student);
+    return this.httpClient.put(`${this.baseUrl}/students/${idS}`,student);
   }
 
   //to delete a student
   deleteStudent(idS: number):Observable<Object>{
-    return this.httpClient.delete(`${this.baseUrl}/${idS}`);
+    return this.httpClient.delete(`${this.baseUrl}/students/${idS}`);
   }
 
   //we'll call the specific student to update by id
   getStudentById(idS:number):Observable<Student>{
-    return this.httpClient.get<Student>(`${this.baseUrl}/${idS}`);
+    return this.httpClient.get<Student>(`${this.baseUrl}/students/${idS}`);
   }
 }

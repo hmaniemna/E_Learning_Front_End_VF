@@ -7,9 +7,7 @@ import { Course } from '../classes/course';
   providedIn: 'root'
 })
 export class CourseService {
-  static getCoursesByTeacherId(id: any): Course[] {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   private baseUrl= "http://localhost:8080/api/v1"
 
