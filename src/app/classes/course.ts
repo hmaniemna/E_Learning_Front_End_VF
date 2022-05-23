@@ -4,7 +4,11 @@ export class Course {
     title !: string;
     year !: number;
 idteacher!:number ;
-    description!:String ; 
+    description!:String ;
+    jour!:String;
+    datestart!:String;
+    dateend!:String;
+
 
 }
 

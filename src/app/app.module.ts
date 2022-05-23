@@ -91,6 +91,8 @@ import { ChatComponent } from './chat/chat.component';
 import { EventsComponent } from './events/events.component';
 import { TodoComponent } from './todo/todo.component';
 import { DialogsComponent } from './dialogs/dialogs.component';
+import { NotesComponent } from './teacherspace/notes/notes.component';
+
 
 
 
@@ -148,6 +150,8 @@ TeacherspaceComponent,
       EventsComponent,
       TodoComponent,
       DialogsComponent,
+      NotesComponent,
+      
 
   ],
 

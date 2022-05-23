@@ -104,7 +104,13 @@ todoCompleted(index: number, isComplete: boolean): void {
   todo.completed = isComplete;
   this.updateTodo(todo);
 }
-
+GoTonotesboard($myParam: string = ''): void {
+  const navigationDetails: string[] = ['/notes'];
+  if($myParam.length) {
+    navigationDetails.push($myParam);
+  }
+  this.router.navigate(navigationDetails);
+}
   meetSupport(){
     location.href = "https://accounts.google.com/AccountChooser/signinchooser?continue=https://g.co/meet/Course";
  }

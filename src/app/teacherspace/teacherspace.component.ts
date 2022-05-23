@@ -44,7 +44,7 @@ getCourses(){
 }
 
 
- 
+
   gotoclassroom(idcourse:number){
     this.router.navigate(["classroom-teacher",idcourse]);
   }
@@ -54,6 +54,13 @@ getCourses(){
 
   GoTocalendrier($myParam: string = ''): void {
     const navigationDetails: string[] = ['/calendrier'];
+    if($myParam.length) {
+      navigationDetails.push($myParam);
+    }
+    this.router.navigate(navigationDetails);
+  }
+  GoTonotesboard($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/notes'];
     if($myParam.length) {
       navigationDetails.push($myParam);
     }

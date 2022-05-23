@@ -1,8 +1,108 @@
 <section>
+
+
+  <!-- LOGO AND MENU SECTION -->
+  <div class="top-logo" data-spy="affix" data-offset-top="250">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="wed-logo">
+                      <a href="index-2.html"><img src="assets/images/logo.png" alt="" />
+                      </a>
+                  </div>
+
+                      <ul>
+                        <li class="page-back"><a href="./"><i class="fa fa-backward" routerLink="/home" aria-hidden="true"></i> Logout</a>
+                        </li>
+
+
+                        </ul>
+
+
+
+
+
+
+              </div>
+
+
+          </div>
+      </div>
+  </div>
+  <div class="search-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="search-form">
+                      <form>
+                          <div class="sf-type">
+                              <div class="sf-input">
+                                  <input type="text" id="sf-box" placeholder="Search course and discount courses">
+                              </div>
+                              <div class="sf-list">
+                                  <ul>
+                                      <li><a href="course-details.html">c++</a></li>
+                                      <li><a href="course-details.html">python</a></li>
+                                      <li><a href="course-details.html">Art/Design</a></li>
+                                      <li><a href="course-details.html">Java</a></li>
+                                      <li><a href="course-details.html">Business Management</a></li>
+                                      <li><a href="course-details.html">Machine learning</a></li>
+                                      <li><a href="course-details.html">Réseau informatique</a></li>
+                                      <li><a href="course-details.html">Political Science</a></li>
+                                      <li><a href="course-details.html">Sciences</a></li>
+                                      <li><a href="course-details.html">Statistics</a></li>
+                                      <li><a href="course-details.html">Web Design/Development</a></li>
+                                      <li><a href="course-details.html">SEO</a></li>
+                                      <li><a href="course-details.html">Google Business</a></li>
+                                      <li><a href="course-details.html">Graphics Design</a></li>
+                                      <li><a href="course-details.html">Networking Courses</a></li>
+                                      <li><a href="course-details.html">Information technology</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="sf-submit">
+                              <input type="submit" value="Search Course">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--END HEADER SECTION-->
+
+<section>
+  <div class="pro-cover">
+  </div>
+  <div class="pro-menu">
+    <div class="container">
+        <div class="col-md-9 col-md-offset-3">
+            <ul>
+
+                <li><a href="https://docs.google.com/forms/d/1fM3NFDYu0EgPSAVpR77UeiIqZX6gaXNOkSqg1Gsqn94/edit"><img src="assets/images/icon/cor4.png" alt="">Add Quiz</a></li>
+
+                <li><a href="db-exams.html" routerLink="/addexam"><img src="assets/images/icon/cor4.png" alt="">Add Tests</a></li>
+               <li><a routerLink="/notes"> <i class="fa fa-pencil" ></i> Write notes</a></li>
+<li><a routerLink="/chat"><i class="fa fa-commenting-o" ></i> Forum</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+  </section>
+<section>
     <div class="container com-sp pad-bot-70 pg-inn">
+
         <div class="row">
             <div class="cor">
                 <div class="col-md-3">
+                  <div class="de-left-tit">
+                    <a class="collapsible-header"><i class="fa fa-cloud-download" aria-hidden="true"></i> Import & Export</a>
+                    </div>
+                    <div>
+                    </div>
                     <div class="cor-top-deta cor-side-com">
                         <div class="cor-top-deta">
                             <div class="ho-st-login cor-apply field-com">
@@ -41,8 +141,48 @@
                             </div>
                         </div>
                     </div>
+                    <!--course liste-->
+                    <div class="col-md-6">
 
-                    <div class="cor-side-com">
+                      <div class="cor-con-mid">
+                          <div class="cor-p1">
+
+
+                              <h2>{{course.title}}</h2>
+
+                            <!--<h4><img src="assets/images/icon/db4.png" alt="" />{{course.jour}}/{{datestart}}->{{dateend}}</h4>-->
+                          </div>
+                          <div class="cor-p4">
+                              <h3>Course Details:</h3>
+                              <p> {{course.description}}</p>
+                          </div>
+
+                          <div class="cor-p4">
+  <div class="de-left-tit">
+
+           <button class="btn btn-info" (click)="meetSupport()"> Link meet </button>
+           </div>
+  <h3><img src="assets/images/icon/db3.png" alt="" />courses table:</h3>
+  <ul class="collapsible" data-collapsible="accordion">
+                                  <li>
+                                      <div class="collapsible-header active">{{course.year}}</div>
+                                      <div class="collapsible-body cor-tim-tab">
+                                          <h4> Courses</h4>
+                                          <ul  *ngFor="let file of fileInfos | async">
+                                              <li><a href="{{ file.url }}">{{ file.name }}</a></li>
+
+                                          </ul>
+
+                                      </div>
+                                  </li>
+
+
+                              </ul>
+   </div>
+    </div>
+   </div>
+<!--upcoming events-->
+                  <!--  <div class="cor-side-com">
                       <div class="col s12">
                         <div class="">
                             <div class="de-left-tit">
@@ -83,7 +223,8 @@
 
                     </div>
                 </div>
-                </div>
+                </div>-->
+                <!--end upcoming events-->
 
                 <!--to do list-->
                 <div class="col-md-3">
@@ -137,17 +278,8 @@
                   <!--end to do-->
 
 
-                  <div class="cor-p5">
-                    <h3>Course Syllabus</h3>
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#home"  routerLink="/addexam" routerLinkActive="active">
-                        <img src="assets/images/icon/cor4.png" alt=""> <span>add Test</span></a>
-                        </li>
-                        <li><a data-toggle="tab" href="#menu1"><img src="assets/images/icon/cor3.png" alt=""><span>Add Quiz</span></a></li>
-                        <li><a data-toggle="tab" href="#menu2" (click)="gotostudentlist(course.idteacher)"><i class="fa fa-users" aria-hidden="true"></i><span>Student Profile</span></a></li>
-                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-pencil" aria-hidden="true"></i> <span>Board</span></a></li>
-                        <li><a data-toggle="tab" href="#menu2" routerLink="/chat"><i class="fa fa-commenting-o" aria-hidden="true"></i> <span>Forum</span></a></li>
-                      </ul>
+<!--
+
                 <div class="col-md-6">
 
                     <div class="cor-con-mid">
@@ -172,7 +304,7 @@
 
 
 
-                            <h3>courses table:</h3>
+                            <h3><img src="assets/images/icon/db3.png" alt="" />courses table:</h3>
 
                          <ul class="collapsible" data-collapsible="accordion">
                                 <li>
@@ -194,10 +326,13 @@
                         </div>
                     </div>
                     </div>
+                  -->
+                    <!--end courseliste-->
+
                     </div>
 
                 </div>
-            </div>
+
 
 
 
@@ -210,9 +345,7 @@
 
 <!--SECTION START-->
 
-<!--SECTION END-->
 
-<!--HEADER SECTION-->
 <section class="wed-hom-footer">
     <div class="container">
 

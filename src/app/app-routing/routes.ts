@@ -34,6 +34,8 @@ import { UpdateCalendarComponent } from '../admin-space/manage-calendar/update-c
 import {ClassroomTeacherComponent}from '../teacherspace/classroom-teacher/classroom-teacher.component';
 import { ChatComponent } from '../chat/chat.component';
 import { TodoComponent } from '../todo/todo.component';
+import { NotesComponent } from '../teacherspace/notes/notes.component';
+
 
 export const routes: Routes = [
 
@@ -77,6 +79,7 @@ export const routes: Routes = [
     {path: 'manage-subject', component: ManageSubjectComponent},
     {path: 'create-subject',  component: CreateSubjectComponent },
     {path: 'update-subject/:id',  component: UpdateSubjectComponent },
-
+    {path: 'notes' , component: NotesComponent},
+    
 ];
 
