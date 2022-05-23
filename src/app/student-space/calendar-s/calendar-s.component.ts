@@ -1,35 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CalendarOptions } from '@fullcalendar/angular';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
-
+import { AfterViewInit, Component, OnInit,ViewChild } from '@angular/core';
+import {DayPilot, DayPilotSchedulerComponent} from "daypilot-pro-angular";
+import { DataService,EventMoveParams, EventCreateParams,EventDeleteParams } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-calendar-s',
   templateUrl: './calendar-s.component.html',
-  styleUrls: ['./calendar-s.component.scss']
+  styleUrls: ['./calendar-s.component.scss'],
+  
 })
-export class CalendarSComponent implements OnInit {
+export class CalendarSComponent {
 
   
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth',
-    dateClick: this.handleDateClick.bind(this), // bind is important!
-    events: [
-      { title: 'event 1', date: '2022-04-01' },
-      { title: 'event 2', date: '2022-04-02' }
-    ]
-  };
-
-  handleDateClick(arg) {
-    alert('date click! ' + arg.dateStr)
-  }
   
   
 
