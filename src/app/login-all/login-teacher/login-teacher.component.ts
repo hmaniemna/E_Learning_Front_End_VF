@@ -17,7 +17,7 @@ public teacher:Teacher = new Teacher();
   ngOnInit(): void {
   }
 
-  loginteacher(){
+  loginTeacher(){
     console.log(this.teacher.emailId,this.teacher.password);
     console.log(this.teacher);
 
@@ -27,6 +27,7 @@ public teacher:Teacher = new Teacher();
 
 
       alert("Login operation successful!")
+<<<<<<< HEAD
       //to navigate to another
       this.router.navigate(["/teacherspace/"+this.teacher.idT]);
 
@@ -36,3 +37,12 @@ public teacher:Teacher = new Teacher();
 
 
 }
+=======
+      //to navigate to another page
+      this.router.navigate(["/teacherspace/"+this.teacher.idT]);
+      
+    },
+    error => alert("Error, Please retry!"));  }
+
+}
+>>>>>>> 116689e03ada33e458e5ad4e79f427ce0e1aff95

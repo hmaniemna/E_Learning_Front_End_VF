@@ -56,10 +56,10 @@
                                                 <th> First Name</th>
                                                 <th> Last Name </th>
                                                 <th> Email Id</th>
-                                                <th>Groupe</th>
-                                                <th>Level</th>
                                                 <th>password</th>
                                                 <th>accessCode</th>
+                                                <th>Groupe</th>
+                                                <th>Level</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -67,13 +67,12 @@
                                             <tr *ngFor = "let student of students" >
                                                 <td> {{ student.firstName }} </td>
                                                 <td> {{ student.lastName }} </td>
-                                                <td> {{ student.emailId }} </td>
-                                                <td> {{ student.group.nameG}} </td>
-                                                <td> {{ student.group.levelG}} </td>
+                                                <td> {{ student.email }} </td>
                                                 <td> {{ student.password }} </td>
                                                 <td> {{ student.accessCode }} </td>
-                                                
-                                                
+                                                <td> {{ student.group.nameG}} </td>
+                                                <td> {{ student.group.levelG}} </td>
+                                            
                                                 
                                                 <td>
                                                     <button (click)= "updateStudent(student.idS)" class="btn btn-info">update</button>

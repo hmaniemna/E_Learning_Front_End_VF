@@ -1,0 +1,84 @@
+<body>
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1" style="height: 8%;">
+        <div class="row">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                
+                <a href="index-2.html" class="logo"><img src="assets/images/logo1.png" alt="" />
+                </a>
+            </div>
+            <!--== MY ACCCOUNT ==-->
+           
+        </div>
+    </div>
+
+    <div class="container-fluid sb2">
+        <div>
+            <div class="sb2-1">
+                
+                <app-side-bar-s></app-side-bar-s>
+                
+                
+                          
+                
+            </div>
+
+            <!--== BODY INNER CONTAINER ==-->
+            <div class="sb2-2">
+                <!--== breadcrumbs ==-->
+                <div class="sb2-2-2">
+                    <ul>
+                        <li><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre"><a href="" [routerLink]="['/student-space/', this.student.idS]" routerLinkActive="active"> Dashboard</a>
+                        </li>
+                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+
+          
+                <!--== DASHBOARD INFO ==-->
+              
+                   <!--<div class="stu-db">
+                   <div class="container pg-inn">--> 
+                       <!--SECTION START-->
+   
+        <!--<div class="stu-db">
+            <div class="container pg-inn">
+                <div class="col-md-9">-->
+                    <div class="udb">
+                        <div class="udb-sec udb-time">
+                            <div class="sdb-cours">
+                                <ul *ngFor = "let course of courses">
+                                    <li>
+                                        <a href="" [routerLink]="['/student-classroom/', this.course.idCourse]" routerLinkActive="active" >
+                                            <div class="list-mig-like-com com-mar-bot-30">
+                                                <div class="list-mig-lc-img"> <img src="assets/images/course/3.jpg" alt=""> <span class="home-list-pop-rat list-mi-pr">{{course.description}}</span> </div>
+                                                <div class="list-mig-lc-con">
+                                                    <h5>{{course.title}}</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+  
+    <!--SECTION END-->
+
+                        
+                
+              
+           
+       
+  
+
+</body>

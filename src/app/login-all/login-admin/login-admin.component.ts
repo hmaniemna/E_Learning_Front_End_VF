@@ -20,12 +20,13 @@ export class LoginAdminComponent implements OnInit {
 
   loginAdmin(){
     console.log(this.admin);
-    this.adminService.adminLogin(this.admin).subscribe(data=> {
+    this.adminService.adminLogin(this.admin.code,this.admin.password).subscribe(data=> {
       alert("Login operation successful!");
       this.goToAdminSpace();
     },
     error => alert("Error, Please retry!"));
   }
+
 
   goToAdminSpace(){
     this.router.navigate(['/admin-space']);

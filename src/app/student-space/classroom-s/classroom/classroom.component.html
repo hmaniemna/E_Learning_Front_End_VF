@@ -1,0 +1,272 @@
+<body>
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1" style="height: 8%;">
+        <div class="row">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                
+                <a href="index-2.html" class="logo"><img src="assets/images/logo1.png" alt="" />
+                </a>
+            </div>
+            <!--== MY ACCCOUNT ==-->
+            
+        </div>
+    </div>
+
+    <div class="container-fluid sb2">
+        <div>
+            <div class="sb2-1">
+            <app-side-bar-s></app-side-bar-s>
+            </div>
+
+            <!--== BODY INNER CONTAINER ==-->
+            <div class="sb2-2">
+                <!--== breadcrumbs ==-->
+                <div class="sb2-2-2">
+                    <ul>
+                        <li><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                       <!-- <li class="active-bre"><a href="" [routerLink]="['/student-space/', this.student.idS]" routerLinkActive="active"> Dashboard</a>
+                        </li>-->
+                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+
+          
+                <!--== DASHBOARD INFO ==-->
+              
+                 <!--  <div class="stu-db">
+                    <div class="container pg-inn">
+                        <div class="col-md-9">-->
+                            <div class="udb">
+                                <section>
+                                    <div class="container com-sp pad-bot-70 pg-inn">
+                                        <div class="row">
+                                            <div class="cor">
+                                                <div class="col-md-3">
+                                                    <div class="cor-top-deta cor-side-com">
+                                                        <div class="cor-top-deta">
+                                                            <div class="ho-st-login cor-apply field-com">
+                                                                
+                                    <!--<div class="col s12">
+                                    <label class="btn btn-default p-0">
+                                    </label>
+                                    
+                                  </div>-->
+                                  <button type="button" class="btn btn-info"><input type="file" (change)="selectFile($event)"  /></button>
+                                
+                                  <div class="col-4">
+                                    <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
+                                      Upload
+                                    </button>
+                                  </div>
+                                
+                                
+                                <div *ngIf="currentFile" class="progress my-3">
+                                  <div
+                                    class="progress-bar progress-bar-info"
+                                    role="progressbar"
+                                    attr.aria-valuenow="{{ progress }}"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    [ngStyle]="{ width: progress + '%' }"
+                                  >
+                                    {{ progress }}%
+                                  </div>
+                                </div>
+                                <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
+                                
+                                
+                                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                
+                                                    <div class="cor-side-com">
+                                            
+                                                        <div class="">
+                                                            <div class="de-left-tit">
+                                                                <h4>{{course.title}}</h4>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                            
+                                                      
+                                                        
+                                                       <!-- <div>
+                                                          <div class="ho-event pg-eve-main" *ngFor = "let event of events">
+                                                              <ul>
+                                                                  <li>
+                                                                      <div class="ho-ev-date pg-eve-date"><span>{{event.dayEvent}} , {{event.monthEvent}}</span>
+                                                                      </div>
+                                                                      <div class="ho-ev-link pg-eve-desc">
+                                                                          <a href="event-register.html">
+                                                                              <h2>{{event.nameEvent}}</h2>
+                                                                                 
+                                
+                                                                          </a>
+                                                                          <a href="event-register.html">
+                                                                            <h4>{{event.description}}</h4>
+                                                                            <h2>{{event.link}}</h2>
+                                                                               
+                                
+                                                                        </a>
+                                                                      </div>
+                                
+                                
+                                                                  </li>
+                                
+                                
+                                
+                                
+                                
+                                
+                                                              </ul>
+                                                          </div>
+                                
+                                                    </div>-->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    
+                                                    <div class="cor-con-mid">
+                                                
+                                                      
+                                
+                                                        <div class="cor-p4">
+                                    
+                                        <h3>course details:</h3>
+                                
+                                            <ul class="collapsible" data-collapsible="accordion">
+                                                <li>
+                                                    <div class="collapsible-header active">My Courses</div>
+                                                        <div class="collapsible-body cor-tim-tab">
+                                                            
+                                                                <ul  *ngFor="let doc of DocInfos | async">
+                                                                    <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+                                                                    <!--<li>
+                                                                        
+                                                                        <input type="button" (click)="DownloadDoc(1)" value="{{ doc.name }}"/>
+                                                                    </li>-->
+                                                                    
+                                                                </ul>
+                                                        </div>
+                                                </li>
+                                                <li>
+                                                    <div class="collapsible-header active">My HomeWork</div>
+                                                        <div class="collapsible-body cor-tim-tab">
+                                                            
+                                                                <ul  *ngFor="let file of fileInfos | async">
+                                                                    <li><a href="{{ file.url }}">{{ file.name }}</a></li>
+                                                                    
+                                                                </ul>
+                                                        </div>
+                                                </li>
+                                                
+                                                <li>
+                                                    <div class="collapsible-header active">My Work</div>
+                                                        <div class="collapsible-body cor-tim-tab">
+                                                            
+                                                                <ul  *ngFor="let WorkS of WorkSInfos | async">
+                                                                    <li><a href="{{ WorkS.url }}">{{ WorkS.name }}</a></li>
+                                                                    <!--<li>
+                                                                        
+                                                                        <input type="button" (click)="DownloadDoc(1)" value="{{ doc.name }}"/>
+                                                                    </li>-->
+                                                                    
+                                                                </ul>
+                                                        </div>
+                                                </li>
+                                            </ul>
+
+                                            
+                                     </div>
+                                     <div class="de-left-tit">
+                                        <button class="btn btn-info" (click)="meetSupport()"> Link meet </button>
+                                    </div>
+                                     <div class="cor-p6">
+                                        <h3>Write Reviews</h3>
+                                        <div class="cor-p7-revi">
+                                            <div class="chat-content">
+                                                <div class="card">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item" *ngFor="let chatMessage of webSocketService.chatMessages">
+                        
+                                                            <strong>{{chatMessage.user}}: </strong>
+                                                            <span>{{chatMessage.message}}</span>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <form class="col s12">
+                                               <!-- <div class="row">
+                                                    <div class="input-field col s6">
+                                                        <input type="text" class="validate">
+                                                        <label>Name</label>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                        <input type="text" class="validate">
+                                                        <label>Email id</label>
+                                                    </div>
+                                                </div>-->
+                                                
+                                               
+                                                <form (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">
+                                                    <div class="chat-send row">
+                                                        <div class="row">
+                                                            <div class="input-field col s12">
+                                                                <input type="text" class="form-control" name="user" id="input-user" ngModel>
+            
+                                                                <label>User Name</label>
+                                                            </div>
+                                                            <div class="input-field col s12">
+                                                                <input type="text" class="form-control" name="message" id="input-message" ngModel>
+                                                            
+                                                                <label>Message</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="input-field col s12">
+                                                                <input type="submit" value="Submit" class="waves-effect waves-light btn-book">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                            
+                                
+                                </section>
+                           
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+              
+    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+

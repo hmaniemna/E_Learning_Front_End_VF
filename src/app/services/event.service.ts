@@ -8,7 +8,11 @@ import { Event } from '../classes/event';
 })
 export class EventService {
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 116689e03ada33e458e5ad4e79f427ce0e1aff95
   private baseUrl= "http://localhost:8080/api/v1/schoolevents"
 
   constructor(private httpClient: HttpClient) { }
@@ -39,3 +43,8 @@ deleteEvent(id:number):Observable<Object>{
 }
 
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 116689e03ada33e458e5ad4e79f427ce0e1aff95

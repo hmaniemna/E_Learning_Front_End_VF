@@ -63,9 +63,9 @@
                                             </div>
                                         
                                             <div class="form-group">
-                                                <label> Email Id</label>
+                                                <label> Email </label>
                                                 <input formControlName="email" type="text" class ="form-control" id = "emailId" 
-                                                    [(ngModel)] = "student.emailId" name = "emailId" >
+                                                    [(ngModel)] = "student.email" name = "emailId" >
                                                     <span *ngIf="email?.invalid && email?.touched" class="text-danger">email is is required or format is invalid!</span>
                                             </div>
 

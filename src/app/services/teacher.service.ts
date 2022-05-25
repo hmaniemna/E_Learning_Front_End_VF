@@ -12,7 +12,14 @@ export class TeacherService {
 
 
   private baseUrl="http://localhost:8080/api/v1/teachers"
+
   constructor(private httpClient:HttpClient) { }
+
+  //login to pass the data from the server to the controllers
+  teacherLogin(emailId:String, password:String): Observable<Object> {
+    console.log(emailId, password);
+    return this.httpClient.get(`${this.baseUrl}/${emailId}/${password}`);
+  }
 
   //return the teacher list
   getTeacherList():Observable<Teacher[]>{
@@ -42,9 +49,12 @@ export class TeacherService {
   getAllcourses(id:number):Observable<Course>{
     return this.httpClient.get<Course>(`${this.baseUrl}/${id}`);}
 
+<<<<<<< HEAD
    teacherLogin(email:String , password: String):Observable<Teacher>{
       console.log(email , password);
       return this.httpClient.get<Teacher>(`${this.baseUrl}/${email}/${password}`);
 
     }
+=======
+>>>>>>> 116689e03ada33e458e5ad4e79f427ce0e1aff95
 }

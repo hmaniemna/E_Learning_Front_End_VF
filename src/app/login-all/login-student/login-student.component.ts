@@ -10,7 +10,7 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class LoginStudentComponent implements OnInit {
 
-student:Student = new Student();
+ public student:Student = new Student();
 
   constructor(private router: Router,
     private studentService: StudentService) { }
@@ -20,13 +20,19 @@ student:Student = new Student();
 
  
 
+
   loginStudent(){
+    console.log(this.student.email,this.student.password);
     console.log(this.student);
-    this.studentService.studentLogin(this.student).subscribe(data=> {
+    //console.log(this.studentService.studentLogin(this.student.email,this.student.password));
+    this.studentService.studentLogin(this.student.email,this.student.password).subscribe(data=> {
+      this.student = data;
       alert("Login operation successful!")
       //to navigate to another page
-     // this.router.navigate(['/student-space']);
+      console.log(this.student);
+      this.router.navigate(["/student-space/"+this.student.idS]);
     },
-    error => alert("Error, Please retry!"));
+    error => alert("Error, Please retry!"))
   }
+
 }

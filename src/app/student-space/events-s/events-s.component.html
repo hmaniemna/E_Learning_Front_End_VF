@@ -1,0 +1,94 @@
+<body>
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1" style="height: 8%;">
+        <div class="row">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                
+                <a href="index-2.html" class="logo"><img src="assets/images/logo1.png" alt="" />
+                </a>
+            </div>
+            <!--== MY ACCCOUNT ==-->
+        
+        </div>
+    </div>
+
+    <div class="container-fluid sb2">
+        <div>
+            <div class="sb2-1">
+                
+                <app-side-bar-s></app-side-bar-s>
+                
+                          
+                
+            </div>
+
+            <!--== BODY INNER CONTAINER ==-->
+            <div class="sb2-2">
+                <!--== breadcrumbs ==-->
+                <div class="sb2-2-2">
+                    <ul>
+                        <li><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                       <!-- <li class="active-bre"><a href="" [routerLink]="['/student-space/', this.student.idS]" routerLinkActive="active"> Dashboard</a>
+                        </li>-->
+                        <li class="page-back"><a href="" routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+
+          
+                <!--== DASHBOARD INFO ==-->
+              
+                   <div class="stu-db">
+                    <div class="container pg-inn">
+                        <!--SECTION START-->
+    <section>
+        <div class="container com-sp">
+            <div class="row">
+                <div class="cor about-sp">
+                    <div class="ed-about-tit">
+                        <div class="con-title">
+                            <h2>College <span> Events</span></h2>
+                            
+                        </div>
+                        <div>
+                            <div class="ho-event pg-eve-main">
+                                <ul  *ngFor = "let event of events">
+                                    <li>
+                                        <div class="ho-ev-date pg-eve-date"><span>{{event.dayEvent}}</span><span>{{event.monthEvent}},{{event.yearEvent}}</span>
+                                        </div>
+                                        <div class="ho-ev-link pg-eve-desc">
+                                            <a href="event-register.html">
+                                                <h4>{{event.nameEvent}}</h4>
+                                            </a>
+                                            <p>{{event.description}}</p>
+                                            <span>{{event.duration}} days</span>
+                                        </div>
+                                        <!--<div class="pg-eve-reg">
+                                            <a href="" [routerLink]="['/student-event/', this.event.idEvent]" routerLinkActive="active">Read more</a>
+                                        </div>-->
+                                    </li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--SECTION END-->
+
+
+                        
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+</body>

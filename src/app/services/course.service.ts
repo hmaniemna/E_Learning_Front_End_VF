@@ -39,6 +39,10 @@ deleteCourse(id:number):Observable<Object>{
 }
 
 getCoursesByTeacherId(teacher_id: number) {
-    return this.httpClient.get<Course[]>(`${this.baseUrl}/courselist/${teacher_id}`);
+    return this.httpClient.get<Course[]>(`${this.baseUrl}/courselistT/${teacher_id}`);
+}
+
+getCoursesByStudentId(student_id: number) {
+  return this.httpClient.get<Course[]>(`${this.baseUrl}/courselistS/${student_id}`);
 }
 }
